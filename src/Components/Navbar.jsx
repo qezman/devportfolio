@@ -1,24 +1,26 @@
-import React, { useEffect, useState, useRef } from "react";
-import Link from "next/link";
-import { FaBars, FaCartPlus, FaMoon, FaSun } from "react-icons/fa";
-import { useToggleBackground } from "../context/ToggleBackgroundContext";
-import { useCart } from "../context/CartContext";
+"use client";
+
+import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBehance, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+
+const contactInfo = {
+  email: "your-email@example.com",
+  socialLinks: {
+    behance: "https://www.behance.net/jimohkazeem",
+    linkedin: "https://www.linkedin.com/in/kazeem-jimoh-027a3b21a/",
+    whatsapp: "https://wa.me/8122142257",
+    github: "https://github.com/qezman",
+  },
+};
 
 const Navbar = () => {
-  const { cartItems } = useCart();
-  const [activeItem, setActiveItem] = useState("");
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  const { toggleBackground, handleToggleBackground } = useToggleBackground();
-
   const handleDropdownToggle = () => {
     setIsDropDownOpen((prev) => !prev);
-  };
-
-  const handleItemClick = (item) => {
-    setActiveItem(item);
-    setIsDropDownOpen(false);
   };
 
   useEffect(() => {
@@ -33,215 +35,94 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleScroll = (event, sectionId) => {
+    event.preventDefault(); // Prevent default link behavior
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsDropDownOpen(false); // Close mobile menu after clicking
+    }
+  };
+
   return (
-    <div>
-      <nav
-        className={`${
-          toggleBackground ? "bg-gray-800" : ""
-        } text-gray-200 p-4 text-[11px] gap-x-4 flex justify-center md:justify-end md:px-8 md:text-[13px] items-center`}
-      >
-        <div className="lg:px-12 lg:px-0 lg:mx-auto">
-          <Link href="/signin" className="hover:underline">
-            Sign in / Guest
-          </Link>
-          <Link href="/signup" className="hover:underline">
-            Create Account
-          </Link>
+    <nav className="text-white fixed top-0 left-0 w-full p-6 xl:px-48 bg-opacity-80 backdrop-blur-md z-50">
+      {/* Desktop Navigation - Centered */}
+      <div className="hidden lg:flex justify-center xl:justify-between items-center gap-x-20">
+        {/* Logo */}
+        <div className="text-white font-bold text-2xl">
+          <Image src="/logo.svg" alt="Logo" width={40} height={40} />
         </div>
-      </nav>
 
-     
+        {/* Navbar Links */}
+        <ul className="flex space-x-10">
+          {["Home", "About", "Projects", "Contact"].map((item, index) => (
+            <li key={index}>
+              <a
+                href={`#${item.toLowerCase()}`}
+                onClick={(e) => handleScroll(e, item.toLowerCase())}
+                className="hover:text-gray-400 cursor-pointer font-medium text-lg"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-      <nav
-        className={`${
-          toggleBackground
-            ? "bg-blue-50 text-gray-800"
-            : "bg-gray-800 text-blue-50"
-        } px-10 lg:px-20 xl:px-[330px] flex items-center justify-between py-2 text-xl 
-        `}
-      >
-        {/* Dropdown Toggle */}
-        <div ref={dropdownRef} className="relative lg:hidden">
-          {/* Toggle Button */}
-          <button
-            onClick={handleDropdownToggle}
-            className={`text-xl ${
-              toggleBackground ? "hover:bg-blue-200" : "hover:bg-gray-700"
-            } p-4 rounded-xl`}
-          >
-            <FaBars />
-          </button>
-
-          {/* Working Dropdown Menu */} 
-          {isDropDownOpen && (
-            <div
-              className={`absolute top-full left-0 mt-2 shadow-md rounded-lg w-48 z-50 ${
-                toggleBackground ? "bg-blue-50" : "bg-gray-800"
-              }`}
+        {/* Social Icons */}
+        <div className="flex justify-center gap-4">
+          {Object.entries(contactInfo.socialLinks).map(([key, link], index) => (
+            <a
+              key={index}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 hover:bg-blue-500 rounded-full transition duration-300"
             >
-              <ul className="space-y-2 p-4">
-                <li>
-                  <Link
-                    href="/"
-                    onClick={() => handleItemClick("home")}
-                    className={`text-sm block px-4 py-2 rounded-md ${
-                      activeItem === "home"
-                        ? toggleBackground
-                          ? "bg-blue-500 text-white"
-                          : "bg-gray-200 text-gray-800"
-                        : toggleBackground
-                        ? "hover:bg-blue-500 text-gray-800"
-                        : "hover:bg-gray-600 text-gray-200"
-                    }`}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    onClick={() => handleItemClick("about")}
-                    className={`text-sm block px-4 py-2 rounded-md ${
-                      activeItem === "about"
-                        ? toggleBackground
-                          ? "bg-blue-500 text-white"
-                          : "bg-gray-200 text-gray-800"
-                        : toggleBackground
-                        ? "hover:bg-blue-500 text-gray-800"
-                        : "hover:bg-gray-600 text-gray-200"
-                    }`}
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products"
-                    onClick={() => handleItemClick("products")}
-                    className={`text-sm block px-4 py-2 rounded-md ${
-                      activeItem === "products"
-                        ? toggleBackground
-                          ? "bg-blue-500 text-white"
-                          : "bg-gray-200 text-gray-800"
-                        : toggleBackground
-                        ? "hover:bg-blue-500 text-gray-800"
-                        : "hover:bg-gray-600 text-gray-200"
-                    }`}
-                  >
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/cart"
-                    onClick={() => handleItemClick("cart")}
-                    className={`text-sm block px-4 py-2 rounded-md ${
-                      activeItem === "cart"
-                        ? toggleBackground
-                          ? "bg-blue-500 text-white"
-                          : "bg-gray-200 text-gray-800"
-                        : toggleBackground
-                        ? "hover:bg-blue-500 text-gray-800"
-                        : "hover:bg-gray-600 text-gray-200"
-                    }`}
-                  >
-                    Cart
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
+              {key === "behance" && <FaBehance className="text-xl" />}
+              {key === "linkedin" && <FaLinkedin className="text-xl" />}
+              {key === "whatsapp" && <FaWhatsapp className="text-xl" />}
+              {key === "github" && <FaGithub className="text-xl" />}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div className="lg:hidden flex justify-between items-center">
+        {/* Logo */}
+        <div className="text-white font-bold text-2xl">
+          <Image src="/logo.svg" alt="Logo" width={40} height={40} />
         </div>
 
-        {/* Center Logo */}
-        <div className="hidden lg:block">
-          <p
-            className={`${
-              toggleBackground ? "bg-blue-600" : "bg-pink-500"
-            } text-white px-4 py-2 font-bold text-3xl rounded-xl`}
-          >
-            C
-          </p>
-        </div>
-
+        {/* Mobile Menu Button */}
         <div
-          className={`${
-            toggleBackground ? "text-gray-700" : "text-gray-100"
-          } hidden lg:flex lg:justify-center lg:items-center lg:gap-x-4 text-sm`}
+          className="flex items-center gap-x-3 bg-blue-800 rounded-lg px-4 py-2 cursor-pointer"
+          onClick={handleDropdownToggle}
         >
-          <Link
-            href={"/"}
-            className={`${
-              toggleBackground
-                ? "hover:bg-gray-800 hover:text-white"
-                : "hover:bg-gray-100 hover:text-gray-700"
-            }  px-4 py-2 rounded-lg`}
-          >
-            Home
-          </Link>
-          <Link
-            href={"/about"}
-            className={`${
-              toggleBackground
-                ? "hover:bg-gray-800 hover:text-white"
-                : "hover:bg-gray-100 hover:text-gray-700"
-            }  px-4 py-2 rounded-lg`}
-          >
-            About
-          </Link>
-          <Link
-            href={"/products"}
-            className={`${
-              toggleBackground
-                ? "hover:bg-gray-800 hover:text-white"
-                : "hover:bg-gray-100 hover:text-gray-700"
-            }  px-4 py-2 rounded-lg`}
-          >
-            Products
-          </Link>
-          <Link
-            href={"/cart"}
-            className={`${
-              toggleBackground
-                ? "hover:bg-gray-800 hover:text-white"
-                : "hover:bg-gray-100 hover:text-gray-700"
-            }  px-4 py-2 rounded-lg`}
-          >
-            Cart
-          </Link>
+          <p className="font-semibold tracking-wide">Menu</p>
+          {isDropDownOpen ? <FaTimes /> : <FaBars />}
         </div>
+      </div>
 
-        {/* Right Icons */}
-        <div className="flex justify-center gap-x-6">
-          <button
-            className={`text-xl ${
-              toggleBackground ? "text-gray-700" : "text-gray-100"
-            }`}
-            onClick={handleToggleBackground}
-          >
-            {toggleBackground ? <FaMoon /> : <FaSun />}
-          </button>
-          <Link
-          href={"/cart"}
-            className={`flex items-center gap-x-2 relative ${
-              toggleBackground ? "text-gray-700" : "text-gray-100"
-            }`}
-          >
-            <FaCartPlus />
-            <span
-              className={`text-sm ${
-                toggleBackground ? "bg-blue-500" : "bg-pink-500"
-              } h-6 absolute bottom-2 left-4 text-center w-6 text-white rounded-xl`}
+      {/* Mobile Dropdown */}
+      {isDropDownOpen && (
+        <div
+          ref={dropdownRef}
+          className="absolute top-16 left-0 w-full bg-gray-900 text-white flex flex-col items-center space-y-4 p-6 lg:hidden shadow-lg"
+        >
+          {["Home", "About", "Projects", "Contact"].map((item, index) => (
+            <a
+              key={index}
+              href={`#${item.toLowerCase()}`}
+              className="text-lg hover:text-gray-400"
+              onClick={() => setIsDropDownOpen(false)}
             >
-              {cartItems.length}
-            </span>
-          </Link>
-
-
-
+              {item}
+            </a>
+          ))}
         </div>
-      </nav>
-    </div>
+      )}
+    </nav>
   );
 };
 

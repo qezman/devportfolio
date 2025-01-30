@@ -1,12 +1,7 @@
-// Pages/index.js
 import Home from "../Components/Home";
 
 const HomePage = () => {
-  return (
-    <section>
-      <Home />
-    </section>
-  );
+    return <Home />;
 };
 
 export default HomePage;
