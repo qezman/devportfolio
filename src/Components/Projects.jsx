@@ -11,6 +11,13 @@ const Projects = () => {
       livelink: "https://mottiv.co/",
     },
     {
+      image: "/comfy.png",
+      title: "Comfy-Store Ecommerce",
+      desc: "This website features a fully functional eCommerce store built with React and Next.js, providing users with a seamless shopping and ordering experience.",
+      tools: ["React, NextJs, TailwindCSS"],
+      livelink: "https://comfy-store-ten-eta.vercel.app/",
+    },
+    {
       image: "/Bag.png",
       title: "Shopping Cart",
       desc: " This mini e-commerce project leverages React's `useReducer` to manage state efficiently. When a user places an order for an item, such as a phone, the state is updated to reflect the new order. This approach simulates the functionality of modern e-commerce websites, showcasing how they handle real-time updates to the shopping cart and inventory.",
@@ -22,6 +29,7 @@ const Projects = () => {
       desc: "This project replicates the Calendly website, using the React framework to showcase a beautiful and dynamic landing page. It demonstrates the implementation of modern UI elements and interactive features, closely mirroring the design and functionality of Calendly.",
       tools: ["React, TailwindCSS"],
     },
+
     {
       image: "/terrestrial-speed-radar.png",
       title: "Speed Radar (Speed Violators Log)",
