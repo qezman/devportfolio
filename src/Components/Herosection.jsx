@@ -90,7 +90,7 @@ const Herosection = () => {
           <div className="flex justify-center items-center flex-col">
             <div className="mt-5 -ml-40 border-l-2 border-t-2 w-12 h-10 border-blue-600"></div>
             <p className="p-4 -mt-10 uppercase font-semibold tracking-wide">
-              See more about me
+              Explore Around
             </p>
             <div className="-mt-10 ml-40 border-r-2 border-b-2 w-12 h-10 border-blue-600"></div>
           </div>
