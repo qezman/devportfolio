@@ -31,7 +31,7 @@ const Skills = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold tracking-tight">My Skills</h1>
+          <h1 className="text-3xl font-extrabold tracking-tight">My Skills</h1>
           <p className="text-gray-400 mt-2">
             A showcase of my technical expertise and tools I work with.
           </p>

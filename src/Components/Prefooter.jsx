@@ -20,7 +20,13 @@ const PreFooter = () => {
           Let's create something extraordinary together.
         </p>
         <button className="mt-10 bg-blue-500 hover:bg-blue-800 font-bold px-8 lg:px-16 py-4 rounded w-fit">
-          Let's Collaborate
+          <a
+            href={"https://wa.me/8122142257"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Let's Collaborate
+          </a>
         </button>
       </div>
     </section>
