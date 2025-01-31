@@ -27,7 +27,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 p-8 text-white">
+    <section className="relative min-h-auto py-10 xl:py-16 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 p-8 text-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
