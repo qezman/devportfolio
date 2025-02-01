@@ -108,7 +108,7 @@ const Navbar = () => {
       {isDropDownOpen && (
         <div
           ref={dropdownRef}
-          className="absolute top-16 left-0 w-full bg-gray-900 text-white flex flex-col items-center space-y-4 p-6 lg:hidden shadow-lg"
+          className="absolute top-16 left-0 w-full bg-blue-900 bg-opacity-80 text-white flex flex-col items-center space-y-4 p-6 lg:hidden shadow-lg"
         >
           {["Home", "About", "Projects", "Contact"].map((item, index) => (
             <a

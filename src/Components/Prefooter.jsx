@@ -19,7 +19,7 @@ const PreFooter = () => {
         <p className="mt-2 text-gray-300 md:text-lg">
           Let's create something extraordinary together.
         </p>
-        <button className="mt-10 bg-blue-500 hover:bg-blue-800 font-bold px-8 lg:px-16 py-4 rounded w-fit">
+        <button className="mt-10 bg-blue-500 hover:bg-blue-800 font-bold px-8 lg:px-16 py-4 rounded w-fit delay-500 duration-500">
           <a
             href={"https://wa.me/8122142257"}
             target="_blank"

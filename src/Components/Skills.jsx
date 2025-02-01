@@ -17,10 +17,10 @@ const Skills = () => {
   const skillsData = [
     { title: "HTML", percent: 90, icon: SiHtml5 },
     { title: "CSS", percent: 95, icon: SiCss3 },
-    { title: "Tailwind CSS", percent: 90, icon: SiTailwindcss },
+    { title: "Tailwind CSS", percent: 95, icon: SiTailwindcss },
     { title: "Figma", percent: 90, icon: SiFigma },
-    { title: "React", percent: 75, icon: SiReact },
-    { title: "Next.JS", percent: 70, icon: SiNextdotjs },
+    { title: "React", percent: 80, icon: SiReact },
+    { title: "Next.JS", percent: 80, icon: SiNextdotjs },
     { title: "Adobe XD", percent: 85, icon: SiAdobexd },
     { title: "Javascript", percent: 78, icon: SiJavascript },
     { title: "Framer", percent: 85, icon: SiFramer },
