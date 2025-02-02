@@ -61,7 +61,7 @@ const Herosection = () => {
                   <img
                     src={slides[currentSlide].image}
                     alt="Slider Image"
-                    className={`mx-auto ${
+                    className={`mx-auto border-4 border-blue-600 ${
                       currentSlide ===
                       slides.findIndex(
                         (slide) => slide.image === "/qossim.jpeg"
@@ -72,7 +72,7 @@ const Herosection = () => {
                   />
                 ) : (
                   <>
-                    <p className="tracking-wider text-xs md:text-sm">
+                    <p className="tracking-wider text-xs uppercase text-gray-400 md:text-sm">
                       {slides[currentSlide].subtitle}
                     </p>
                     <h1 className="font-semibold md:px-16 lg:px-32 xl:64 2xl:w-9/12 2xl:mx-auto text-2xl md:text-4xl lg:text-5xl mt-3 tracking-wide leading-relaxed">
