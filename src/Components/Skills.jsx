@@ -10,6 +10,8 @@ import {
   SiFigma,
   SiAdobexd,
   SiJavascript,
+  SiWebflow,
+  SiWix,
 } from "react-icons/si";
 import { useState } from "react";
 
@@ -17,13 +19,15 @@ const Skills = () => {
   const skillsData = [
     { title: "HTML", percent: 90, icon: SiHtml5 },
     { title: "CSS", percent: 95, icon: SiCss3 },
-    { title: "Tailwind CSS", percent: 95, icon: SiTailwindcss },
+    { title: "Tailwind CSS", percent: 98, icon: SiTailwindcss },
     { title: "Figma", percent: 90, icon: SiFigma },
+    { title: "Webflow", percent: 90, icon: SiWebflow },
     { title: "React", percent: 80, icon: SiReact },
     { title: "Next.JS", percent: 80, icon: SiNextdotjs },
     { title: "Adobe XD", percent: 85, icon: SiAdobexd },
-    { title: "Javascript", percent: 78, icon: SiJavascript },
+    { title: "Javascript", percent: 70, icon: SiJavascript },
     { title: "Framer", percent: 85, icon: SiFramer },
+    { title: "Wix", percent: 85, icon: SiWix },
   ];
 
   return (

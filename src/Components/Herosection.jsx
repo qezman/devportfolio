@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Slide } from "react-toastify";
 
 const Herosection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,7 +7,10 @@ const Herosection = () => {
   // Carousel content
   const slides = [
     {
-      image: "/qossim.jpeg",
+      // image: "/qossim.jpeg",
+      image: "/zeem-1.jpeg",
+      title: "Hey there, I'm Kazeem!",
+      subtitle: "A Passionate Web Developer & Designer",
     },
     {
       title: "Frontend Web Developer",
@@ -22,14 +24,23 @@ const Herosection = () => {
       title: "Creative Thinker",
       subtitle: "Building Innovative Web Experiences",
     },
-    
+    {
+      title: "Problem Solver",
+      subtitle: "Transforming Complex Challenges into Elegant Solutions",
+    },
   ];
 
   // Slide Transition Variants
+  // const slideVariants = {
+  //   hidden: { opacity: 0, x: "-100%" }, // Slide in from left
+  //   visible: { opacity: 1, x: 0 },
+  //   exit: { opacity: 0, x: "-100%" },
+  // };
+
   const slideVariants = {
-    hidden: { opacity: 0, x: "-100%" }, // Slide in from left
-    visible: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: "-100%" },
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 20 },
   };
 
   // Auto-slide every 3 seconds
@@ -61,10 +72,10 @@ const Herosection = () => {
                   <img
                     src={slides[currentSlide].image}
                     alt="Slider Image"
-                    className={`mx-auto border-4 border-blue-600 ${
+                    className={`mx-auto border-4 border-blue-600 w-40 h-40 rounded-full ${
                       currentSlide ===
                       slides.findIndex(
-                        (slide) => slide.image === "/qossim.jpeg"
+                        (slide) => slide.image === "/zeem-1.jpeg"
                       )
                         ? "h-[200px] w-[200px] rounded-full"
                         : "w-[50%] h-[50%] object-cover "

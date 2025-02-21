@@ -58,7 +58,7 @@ const Services = () => {
         {/* First Grid Cell: "My Services" */}
         <article className="lg:col-span-1">
           <h3 className="tracking-wide text-2xl">My Services</h3>
-          <h1 className="text-2xl font-bold my-2 tracking-wider">What I do?</h1>
+          <h1 className="text-2xl font-bold my-2 tracking-wider">Things I do?</h1>
           <hr className="border-4 border-b w-16 border-blue-400" />
           <p className="mt-8 text-gray-200">
             I specialize in building exceptional digital experiences.
