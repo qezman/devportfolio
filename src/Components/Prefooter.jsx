@@ -13,7 +13,7 @@ const PreFooter = () => {
     >
       {/* Carousel Container */}
       <div className="w-full h-full overflow-hidden flex flex-col justify-center pr-20 md:mx-6">
-        <p className="text-2xl md:text-4xl leading-loose lg:text-5xl font-bold md:pr-36 lg:pr-[300px] xl:pr-[500px]">
+        <p className="text-2xl md:text-4xl leading-loose md:leading-[1.5] lg:leading-[1.5] lg:text-5xl font-bold md:pr-36 lg:pr-[300px] xl:pr-[500px]">
           Trusted by the Next Generation of Innovators
         </p>
         <p className="mt-2 text-gray-300 md:text-lg">
