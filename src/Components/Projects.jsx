@@ -25,6 +25,16 @@ const Projects = () => {
       category: "Web Development",
     },
     {
+      image: "/ecommerce-gadget.png",
+      title: "Ecommerce Gadget Store",
+      desc: "This website features a fully functional eCommerce store built with React and Next.js, providing users with a seamless shopping and ordering experience.",
+      tools: ["Figma, Coolors"],
+      livelink:
+        "https://www.behance.net/gallery/222755223/Ecommerce-Gadget-Store",
+      category: "UI/UX",
+    },
+
+    {
       image: "/Bag.png",
       title: "Shopping Cart",
       desc: " This mini e-commerce project leverages React's `useReducer` to manage state efficiently. When a user places an order for an item, such as a phone, the state is updated to reflect the new order. This approach simulates the functionality of modern e-commerce websites, showcasing how they handle real-time updates to the shopping cart and inventory.",
@@ -46,6 +56,15 @@ const Projects = () => {
       tools: ["React, Figma, Arduino, TailwindCSS"],
       livelink: "https://terrestrial-speed-radar.netlify.app/",
       category: "Web Development",
+    },
+    {
+      image: "/Currency-exchange.png",
+      title: "EasyFX Currency Exchange Platform",
+      desc: " This project a full case study and desgin of a exchanging currencies seamlessly with a focus on user experience and user interface design.",
+      tools: ["Figma"],
+      category: "UI/UX",
+      livelink:
+        "https://www.behance.net/gallery/222597099/EasyFX-Currency-Exchange-Platform",
     },
     {
       image: "/lms.png",
@@ -92,15 +111,15 @@ const Projects = () => {
       livelink:
         "https://www.behance.net/gallery/215273337/Pick-up-and-Delivery-App",
     },
-    {
-      image: "/TBS.png",
-      title: "Travel Booking System",
-      desc: " This project a full case study and desgin of a traveling booking system with a focus on user experience and user interface design.",
-      tools: ["Figma"],
-      category: "UI/UX",
-      livelink:
-        "https://www.behance.net/gallery/216890155/Travel-Booking-System",
-    },
+    // {
+    //   image: "/TBS.png",
+    //   title: "Travel Booking System",
+    //   desc: " This project a full case study and desgin of a traveling booking system with a focus on user experience and user interface design.",
+    //   tools: ["Figma"],
+    //   category: "UI/UX",
+    //   livelink:
+    //     "https://www.behance.net/gallery/216890155/Travel-Booking-System",
+    // },
     {
       image: "/Building.png",
       title: "Building Design",
