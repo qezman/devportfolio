@@ -27,7 +27,7 @@ const Projects = () => {
     {
       image: "/ecommerce-gadget.png",
       title: "Ecommerce Gadget Store",
-      desc: "This website features a fully functional eCommerce store built with React and Next.js, providing users with a seamless shopping and ordering experience.",
+      desc: "This website features a fully functional eCommerce store built with Figma, providing users with a seamless shopping and ordering experience.",
       tools: ["Figma, Coolors"],
       livelink:
         "https://www.behance.net/gallery/222755223/Ecommerce-Gadget-Store",
