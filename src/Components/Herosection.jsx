@@ -17,7 +17,7 @@ const Herosection = () => {
       subtitle: "For Web Design & Development",
     },
     {
-      title: "UI/UX Designer",
+      title: "Product Designer",
       subtitle: "Creating Exceptional User Interfaces",
     },
     {
