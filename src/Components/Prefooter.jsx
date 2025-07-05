@@ -6,7 +6,7 @@ const PreFooter = () => {
   return (
     <section
       // className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 h-48 text-white"
-      className="relative h-[50vh] bg-cover w-full bg-center p-4 xl:px-32 2xl:px-[300px] text-white"
+      className="relative min-h-[50vh] bg-cover w-full bg-center p-4 xl:px-32 2xl:px-[300px] text-white"
       style={{
         backgroundImage: "url('/callto-bg.jpg')",
       }}
