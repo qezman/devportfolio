@@ -13,7 +13,7 @@ const Projects = () => {
       title: "Mottiv",
       desc: "This website showcases a complete React structure, allowing users to enroll in courses of their choice and enabling designers to apply for suitable job opportunities.",
       tools: ["Figma, React, TailwindCSS, NodeJs"],
-      livelink: "https://mottiv.co/",
+      livelink: "https://motivv-eight.vercel.app/",
       category: "Web Development",
     },
     {
