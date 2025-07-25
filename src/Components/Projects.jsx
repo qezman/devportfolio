@@ -35,10 +35,11 @@ const Projects = () => {
     },
 
     {
-      image: "/Bag.png",
-      title: "Shopping Cart",
-      desc: " This mini e-commerce project leverages React's `useReducer` to manage state efficiently. When a user places an order for an item, such as a phone, the state is updated to reflect the new order. This approach simulates the functionality of modern e-commerce websites, showcasing how they handle real-time updates to the shopping cart and inventory.",
-      tools: ["React, TailwindCSS"],
+      image: "/cookbook.png",
+      title: "Cookbook",
+      desc: "A responsive recipe search app built with React, TypeScript, and TailwindCSS.",
+      tools: ["React, TailwindCSS, Typescript"],
+      livelink: "https://cookbook-final.vercel.app/",
       category: "Web Development",
     },
     {
@@ -50,11 +51,11 @@ const Projects = () => {
     },
 
     {
-      image: "/terrestrial-speed-radar.png",
-      title: "Speed Radar (Speed Violators Log)",
-      desc: "This React project displays driver logs of speed violations as received from a radar microprocessor. The microprocessor is configured using Arduino software, demonstrating the integration of hardware and software to monitor and report speed violations in real-time.",
-      tools: ["React, Figma, Arduino, TailwindCSS"],
-      livelink: "https://terrestrial-speed-radar.netlify.app/",
+      image: "/product-library.png",
+      title: "ProductLib",
+      desc: "A responsive products search app built with React, TypeScript, and TailwindCSS.",
+      tools: ["React, Typescript, TailwindCSS"],
+      livelink: "https://product-library-elyu.vercel.app/",
       category: "Web Development",
     },
     {
@@ -98,28 +99,10 @@ const Projects = () => {
       title: "Pay4MeApp Redesign",
       desc: "This project is a landing page redesign, showcasing vibrant colors and a modern e-commerce layout.",
       tools: ["Figma"],
-      category: "Web Design",
+      category: "UI/UX",
       livelink:
         "https://www.behance.net/gallery/217755173/Pay4MeApp-(Landing-Page)-Redesign",
     },
-    {
-      image: "/PaladinTasks.png",
-      title: "Paladin Hub",
-      desc: "This project a full case study and desgin of a pick-up and delivery app with a focus on user experience and user interface design.",
-      tools: ["Figma"],
-      category: "UI/UX",
-      livelink:
-        "https://www.behance.net/gallery/215273337/Pick-up-and-Delivery-App",
-    },
-    // {
-    //   image: "/TBS.png",
-    //   title: "Travel Booking System",
-    //   desc: " This project a full case study and desgin of a traveling booking system with a focus on user experience and user interface design.",
-    //   tools: ["Figma"],
-    //   category: "UI/UX",
-    //   livelink:
-    //     "https://www.behance.net/gallery/216890155/Travel-Booking-System",
-    // },
     {
       image: "/Building.png",
       title: "Building Design",
