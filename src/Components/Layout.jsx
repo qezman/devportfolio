@@ -6,11 +6,11 @@ import Navbar from "./Navbar";
 const Layout = ({ children }) => {
   console.log(children);
   return (
-    <div className={`main-container`}>
-      <nav className="">
+    <div className="main-container min-h-screen w-full">
+      <nav className="w-full">
         <Navbar />
       </nav>
-      <main>{children}</main>
+      <main className="flex-1 w-full">{children}</main>
     </div>
   );
 };

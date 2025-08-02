@@ -17,57 +17,59 @@ const Footer = () => {
   const [message, setMessage] = useState("");
 
   return (
-    <footer className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 p-10 text-white">
+    <footer className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white section-padding">
       <div className="max-w-6xl mx-auto text-center">
         {/* Logo */}
-        <div className="flex justify-center">
-          <Image src="/logo.svg" width={40} height={40} alt="Logo" />
+        <div className="flex justify-center mb-6">
+          <Image src="/logo.svg" width={40} height={40} alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
         </div>
 
         {/* Social Icons */}
-        <div className="flex justify-center gap-6 mt-6">
+        <div className="flex justify-center gap-4 sm:gap-6 mb-8">
           {Object.entries(contactInfo.socialLinks).map(([key, link], index) => (
             <a
               key={index}
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-gray-800 hover:bg-blue-500 rounded-full transition duration-300"
+              className="p-2 sm:p-3 bg-gray-800 hover:bg-blue-500 rounded-full transition-all duration-300 hover:scale-110"
             >
-              {key === "behance" && <FaBehance className="text-xl" />}
-              {key === "linkedin" && <FaLinkedin className="text-xl" />}
-              {key === "whatsapp" && <FaWhatsapp className="text-xl" />}
-              {key === "github" && <FaGithub className="text-xl" />}
+              {key === "behance" && <FaBehance className="text-lg sm:text-xl" />}
+              {key === "linkedin" && <FaLinkedin className="text-lg sm:text-xl" />}
+              {key === "whatsapp" && <FaWhatsapp className="text-lg sm:text-xl" />}
+              {key === "github" && <FaGithub className="text-lg sm:text-xl" />}
             </a>
           ))}
         </div>
 
         {/* Collaboration Section */}
-        <div className="mt-12">
-          <h3 className="text-3xl font-semibold">Let's Collaborate</h3>
-          <p className="text-gray-400 mt-2">
-            I’m open to projects and collaborations. Let’s build something
+        <div className="mb-8 sm:mb-12">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
+            Let's Collaborate
+          </h3>
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-6 max-w-2xl mx-auto">
+            I'm open to projects and collaborations. Let's build something
             amazing together!
           </p>
-          <div className="flex justify-center gap-4 mt-6">
-            <button className="px-4 text-sm lg:text-base font-semibold lg:px-6 py-2 border border-gray-500 rounded hover:bg-blue-600 transition duration-300">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            <button className="px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold border border-gray-500 rounded hover:bg-blue-600 transition-all duration-300 hover:scale-105">
               Web Design
             </button>
-            <button className="px-4 text-sm lg:text-base font-semibold lg:px-6 py-2 bg-blue-500 rounded hover:bg-blue-600 transition duration-300">
+            <button className="px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold bg-blue-500 rounded hover:bg-blue-600 transition-all duration-300 hover:scale-105">
               Web Development
             </button>
           </div>
         </div>
 
         {/* Contact Form */}
-        <div className="mt-10 flex justify-center">
-          <div className="flex w-full max-w-md border border-gray-600 rounded-lg overflow-hidden">
+        <div className="mb-8 sm:mb-12">
+          <div className="flex flex-col sm:flex-row w-full max-w-md mx-auto border border-gray-600 rounded-lg overflow-hidden">
             <input
               type="text"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder={`Type your message...`}
-              className="w-full px-4 py-3 bg-transparent outline-none text-white placeholder-gray-400"
+              placeholder="Type your message..."
+              className="w-full px-4 py-3 bg-transparent outline-none text-white placeholder-gray-400 text-sm sm:text-base"
             />
             <a
               href={`mailto:${
@@ -75,7 +77,7 @@ const Footer = () => {
               }?subject=Contact from Website&body=${encodeURIComponent(
                 message
               )}`}
-              className="px-5 bg-blue-500 hover:bg-blue-600 transition duration-300 flex items-center"
+              className="px-4 sm:px-5 py-3 bg-blue-500 hover:bg-blue-600 transition-all duration-300 flex items-center justify-center text-sm sm:text-base font-medium"
             >
               Send
             </a>
@@ -83,12 +85,12 @@ const Footer = () => {
         </div>
 
         {/* Footer Text */}
-        <div className="mt-12 border-t border-gray-700 pt-6">
-          <p className="text-lg font-semibold">Kazeem Jimoh</p>
-          <p className="text-gray-400 mt-2">
+        <div className="border-t border-gray-700 pt-6">
+          <p className="text-lg sm:text-xl font-semibold mb-2">Kazeem Jimoh</p>
+          <p className="text-gray-400 text-sm sm:text-base mb-1">
             Copyright &copy; {new Date().getFullYear()} Qezman
           </p>
-          <p className="text-gray-500">All Rights Reserved.</p>
+          <p className="text-gray-500 text-xs sm:text-sm">All Rights Reserved.</p>
         </div>
       </div>
     </footer>

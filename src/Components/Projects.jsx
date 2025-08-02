@@ -130,104 +130,112 @@ const Projects = () => {
 
   return (
     <section
-      className="relative h-auto bg-cover w-full bg-center p-4 text-white xl:px-80"
+      className="relative min-h-screen bg-cover w-full bg-center bg-no-repeat text-white"
       style={{
         backgroundImage: "url('/5.jpg')",
       }}
     >
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       {/* Content Section */}
-      <div className="relative z-10 my-20 px-4">
-        <h1 className="text-3xl text-center font-bold">My Projects</h1>
-        <p className="text-center font-semibold text-gray-300 text-lg mt-4">
-          Featured and <span>Personal</span> Projects
-        </p>
-
-        {/* Category Tabs */}
-        <div className="grid grid-cols-2 space-y-2 gap-x-3 md:flex justify-center items-center mt-10 md:space-y-0 md:space-x-4">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setSelectedCategory(category);
-                setVisibleProjects(6);
-              }}
-              className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ${
-                selectedCategory === category
-                  ? "bg-blue-500 text-white shadow-lg"
-                  : "bg-gray-800 text-gray-300 hover:bg-blue-500 hover:text-white"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        {/* Projects Grid */}
-        <article className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          <AnimatePresence>
-            {filteredProjects
-              .slice(0, visibleProjects)
-              .map((project, index) => (
-                <motion.div
-                  key={index}
-                  className="relative group bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                >
-                  {/* Project Image */}
-                  <img
-                    src={project.image}
-                    className="w-full h-56 object-cover group-hover:opacity-70 transition-opacity"
-                  />
-
-                  {/* Project Details */}
-                  <div className="p-4">
-                    <h2 className="text-xl font-bold">{project.title}</h2>
-                    <p className="text-gray-300 mt-2 text-sm">{project.desc}</p>
-
-                    {/* Tools Used */}
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {project.tools.map((tool, toolIndex) => (
-                        <span
-                          key={toolIndex}
-                          className="bg-gray-700 text-white px-2 py-1 rounded text-xs"
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Live Link Icon */}
-                  {project.livelink && (
-                    <a
-                      href={project.livelink}
-                      target="_blank"
-                      className="absolute bottom-4 right-4 text-white"
-                      rel="noopener noreferrer"
-                    >
-                      <FaExternalLinkAlt />
-                    </a>
-                  )}
-                </motion.div>
-              ))}
-          </AnimatePresence>
-        </article>
-
-        {/* "View More" Button */}
-        {visibleProjects < filteredProjects.length && (
-          <div
-            className="mt-12 cursor-pointer hover:text-gray-300 flex justify-center items-center gap-x-3"
-            onClick={handleViewMore}
-          >
-            <p className="font-semibold lg:text-lg">View more</p>
-            <FaAngleDown />
+      <div className="relative z-10 section-padding">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12 md:mb-16">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">My Projects</h1>
+            <p className="text-gray-300 text-sm sm:text-base md:text-lg">
+              Featured and <span className="text-blue-400">Personal</span> Projects
+            </p>
           </div>
-        )}
+
+          {/* Category Tabs */}
+          <div className="flex flex-wrap justify-center items-center gap-2 md:gap-3 lg:gap-4 mb-12">
+            {categories.map((category, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setSelectedCategory(category);
+                  setVisibleProjects(6);
+                }}
+                className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ${
+                  selectedCategory === category
+                    ? "bg-blue-500 text-white shadow-lg"
+                    : "bg-gray-800 text-gray-300 hover:bg-blue-500 hover:text-white"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+            <AnimatePresence>
+              {filteredProjects
+                .slice(0, visibleProjects)
+                .map((project, index) => (
+                  <motion.div
+                    key={index}
+                    className="relative group bg-gray-800 bg-opacity-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                  >
+                    {/* Project Image */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 sm:h-56 object-cover group-hover:opacity-70 transition-opacity"
+                    />
+
+                    {/* Project Details */}
+                    <div className="p-4 sm:p-6">
+                      <h2 className="text-lg sm:text-xl font-bold mb-2">{project.title}</h2>
+                      <p className="text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">{project.desc}</p>
+
+                      {/* Tools Used */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.tools.map((tool, toolIndex) => (
+                          <span
+                            key={toolIndex}
+                            className="bg-gray-700 text-white px-2 py-1 rounded text-xs sm:text-sm"
+                          >
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Live Link Icon */}
+                    {project.livelink && (
+                      <a
+                        href={project.livelink}
+                        target="_blank"
+                        className="absolute bottom-4 right-4 text-white hover:text-blue-400 transition-colors duration-300"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt className="text-lg sm:text-xl" />
+                      </a>
+                    )}
+                  </motion.div>
+                ))}
+            </AnimatePresence>
+          </div>
+
+          {/* "View More" Button */}
+          {visibleProjects < filteredProjects.length && (
+            <div className="mt-12 text-center">
+              <button
+                className="cursor-pointer hover:text-blue-400 flex items-center gap-x-2 mx-auto text-sm sm:text-base md:text-lg font-semibold transition-colors duration-300"
+                onClick={handleViewMore}
+              >
+                <span>View more</span>
+                <FaAngleDown />
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

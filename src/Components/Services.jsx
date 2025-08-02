@@ -34,9 +34,9 @@ const Services = () => {
       icon: <FaGlobe />,
     },
     {
-      title: "Frontend framework",
+      title: "Frontend framework mastery",
       subtitle:
-        "Expertise in using popular frameworks like React or Next.js for efficient development.",
+      "Specializing in scalable, component-driven development with React and Next.js, leveraging TypeScript for type safety, maintainability, and developer productivity.",
       icon: <FaReact />,
     },
     {
@@ -46,55 +46,70 @@ const Services = () => {
       icon: <FaCode />,
     },
   ];
+  
   return (
     <section
-      className="relative h-full bg-cover w-full bg-center p-4 text-white xl:px-80"
+      className="relative min-h-screen bg-cover w-full bg-center bg-no-repeat text-white"
       style={{
         backgroundImage: "url('/5.jpg')",
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-80"></div>
-      <div className="relative z-10 my-20 px-4 grid lg:grid-cols-3 lg:gap-8">
-        {/* First Grid Cell: "My Services" */}
-        <article className="lg:col-span-1">
-          <h3 className="tracking-wide text-2xl">My Services</h3>
-          <h1 className="text-2xl font-bold my-2 tracking-wider">Things I do?</h1>
-          <hr className="border-4 border-b w-16 border-blue-400" />
-          <p className="mt-8 text-gray-200">
-            I specialize in building exceptional digital experiences.
-          </p>
-          {/* Decorative Borders and "See More" */}
-          <div className="flex justify-start items-start flex-col">
-            <div className="mt-5 border-l-2 border-t-2 w-12 h-10 border-blue-600"></div>
-            <p className="p-4 -mt-10 text-sm uppercase font-semibold tracking-wide">
-              View all services
+      <div className="absolute inset-0 bg-black bg-opacity-80"></div>
+      <div className="relative z-10 section-padding">
+        <div className="max-w-7xl mx-auto">
+          {/* Header Section */}
+          <div className="text-center mb-12 md:mb-16">
+            <h3 className="tracking-wide text-xl sm:text-2xl md:text-3xl mb-2">My Services</h3>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tracking-wider">Things I do?</h1>
+            <hr className="border-4 border-b w-12 md:w-16 border-blue-400 mx-auto" />
+            <p className="mt-6 md:mt-8 text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+              I specialize in building exceptional digital experiences.
             </p>
-            <div className="-mt-10 ml-32 border-r-2 border-b-2 w-12 h-10 border-blue-600"></div>
           </div>
-        </article>
 
-        {/* Second Grid Cell: Service Cards */}
-        <article className="lg:col-span-2 mt-10 lg:mt-0">
-          <div className="space-y-6 md:space-y-0 md:gap-y-10 md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-            {allServices.map((service) => {
-              return (
-                <section key={service.title} className="flex flex-col pr-16 md:pr-6">
-                  <div className="border-2 text-3xl transform transition-transform duration-700 hover:rotate-45 border-blue-400 w-fit p-4">
-                    {service.icon}
-                  </div>
-                  <h1 className="text-xl tracking-wide font-bold py-2 pr-4 md:py-3">
-                    {service.title}
-                  </h1>
-                  <p className="text-sm text-gray-300 font-light">
-                    {service.subtitle}
-                  </p>
-                </section>
-              );
-            })}
+          {/* Decorative Borders */}
+          <div className="flex justify-center items-center mb-12 md:mb-16">
+            <div className="flex items-center gap-2 sm:gap-4">
+              {/* Left Border */}
+              <div className="flex flex-col items-end">
+                <div className="border-l-2 border-t-2 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 border-blue-600"></div>
+              </div>
+              
+              {/* Center Text */}
+              <p className="uppercase font-semibold tracking-wide text-xs sm:text-sm md:text-base px-2 sm:px-4">
+                all services
+              </p>
+              
+              {/* Right Border */}
+              <div className="flex flex-col items-start">
+                <div className="border-r-2 border-b-2 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 border-blue-600"></div>
+              </div>
+            </div>
           </div>
-        </article>
+
+          {/* Services Grid */}
+          <div className="responsive-grid">
+            {allServices.map((service, index) => (
+              <div
+                key={service.title}
+                className="flex flex-col p-6 bg-gray-800 bg-opacity-50 rounded-xl hover:bg-opacity-70 transition-all duration-300 hover:scale-105"
+              >
+                <div className="border-2 text-2xl sm:text-3xl transform transition-transform duration-700 hover:rotate-45 border-blue-400 w-fit p-3 sm:p-4 mb-4">
+                  {service.icon}
+                </div>
+                <h2 className="text-lg sm:text-xl md:text-2xl tracking-wide font-bold mb-3">
+                  {service.title}
+                </h2>
+                <p className="text-sm sm:text-base text-gray-300 font-light leading-relaxed">
+                  {service.subtitle}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
 };
+
 export default Services;

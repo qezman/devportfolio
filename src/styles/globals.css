@@ -4,29 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap');
 
-.font-light {
-  font-family: 'Josefin Sans', 'Roboto', sans-serif;
-}
-
-
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
-#root, .main-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.dark .button:hover {
-  background-color: #4299e1; /* A darker hover blue for dark theme */
-}
-
-
+/* Base font classes */
 .font-light {
   font-family: 'Josefin Sans', 'Roboto', sans-serif;
 }
@@ -35,22 +13,111 @@ body, html {
   font-family: 'Roboto', sans-serif;
 }
 
-
-body {
-  font-family: 'Roboto', '', sans-serif;
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container and layout improvements */
+#root, .main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Button focus improvements */
 button:focus {
   outline: none;
 }
 
+/* Dark theme button hover */
+.dark .button:hover {
+  background-color: #4299e1;
+}
 
+/* Hero image improvements */
 .hero-img {
-  background-image: url('/path-to-your-image.jpg'); /* Replace with your image path */
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating */
-  height: 20vh; /* Full viewport height */
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack children vertically */
+  background-image: url('/path-to-your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.125rem; }
+  p { font-size: 0.875rem; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  p { font-size: 1rem; }
+}
+
+@media (min-width: 1025px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  p { font-size: 1.125rem; }
+}
+
+/* Smooth transitions for better UX */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Improved spacing utilities */
+.section-padding {
+  padding: clamp(1rem, 5vw, 4rem);
+}
+
+.container-padding {
+  padding: clamp(0.5rem, 3vw, 2rem);
+}
+
+/* Better responsive grid */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
 }

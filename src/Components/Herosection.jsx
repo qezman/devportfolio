@@ -7,7 +7,6 @@ const Herosection = () => {
   // Carousel content
   const slides = [
     {
-      // image: "/qossim.jpeg",
       image: "/zeem-1.jpeg",
       title: "Hey there, I'm Kazeem!",
       subtitle: "A Passionate Web Developer & Designer",
@@ -30,13 +29,6 @@ const Herosection = () => {
     },
   ];
 
-  // Slide Transition Variants
-  // const slideVariants = {
-  //   hidden: { opacity: 0, x: "-100%" }, // Slide in from left
-  //   visible: { opacity: 1, x: 0 },
-  //   exit: { opacity: 0, x: "-100%" },
-  // };
-
   const slideVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0 },
@@ -52,12 +44,12 @@ const Herosection = () => {
   }, []);
 
   return (
-    <main className="absolute inset-0 mt-20 text-white flex items-center justify-center md:px-32">
-      <section className="relative text-center w-full max-w-4xl">
+    <main className="relative min-h-screen flex items-center justify-center text-white section-padding">
+      <section className="relative text-center w-full max-w-6xl mx-auto">
         {/* Top Content */}
         <div className="relative">
-          {/* Animated Carousel with Fixed Height */}
-          <div className="overflow-hidden h-32 md:h-40 flex items-center justify-center">
+          {/* Animated Carousel with Responsive Height */}
+          <div className="overflow-hidden h-24 sm:h-32 md:h-40 flex items-center justify-center">
             <AnimatePresence exitBeforeEnter>
               <motion.div
                 key={currentSlide}
@@ -72,21 +64,14 @@ const Herosection = () => {
                   <img
                     src={slides[currentSlide].image}
                     alt="Slider Image"
-                    className={`mx-auto border-4 border-blue-600 w-40 h-40 rounded-full ${
-                      currentSlide ===
-                      slides.findIndex(
-                        (slide) => slide.image === "/zeem-1.jpeg"
-                      )
-                        ? "h-[200px] w-[200px] rounded-full"
-                        : "w-[50%] h-[50%] object-cover "
-                    }`}
+                    className="mx-auto border-4 border-blue-600 rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-cover"
                   />
                 ) : (
                   <>
-                    <p className="tracking-wider text-xs uppercase text-gray-400 md:text-sm">
+                    <p className="tracking-wider text-xs sm:text-sm uppercase text-gray-400 mb-2">
                       {slides[currentSlide].subtitle}
                     </p>
-                    <h1 className="font-semibold md:px-16 lg:px-32 xl:64 2xl:w-9/12 2xl:mx-auto text-2xl md:text-4xl lg:text-5xl mt-3 tracking-wide leading-relaxed">
+                    <h1 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl tracking-wide leading-tight px-4">
                       {slides[currentSlide].title}
                     </h1>
                   </>
@@ -96,24 +81,37 @@ const Herosection = () => {
           </div>
         </div>
 
-        <article className="mt-10">
+        <article className="mt-8 sm:mt-10 md:mt-12">
           {/* Decorative Borders and "See More" */}
-          <div className="flex justify-center items-center flex-col">
-            <div className="mt-5 -ml-40 border-l-2 border-t-2 w-12 h-10 border-blue-600"></div>
-            <p className="p-4 -mt-10 uppercase font-semibold tracking-wide">
-              Explore Around
-            </p>
-            <div className="-mt-10 ml-40 border-r-2 border-b-2 w-12 h-10 border-blue-600"></div>
+          <div className="flex justify-center items-center">
+            <div className="flex items-center gap-2 sm:gap-4">
+              {/* Left Border */}
+              <div className="flex flex-col items-end">
+                <div className="border-l-2 border-t-2 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 border-blue-600"></div>
+              </div>
+              
+              {/* Center Text */}
+              <p className="uppercase font-semibold tracking-wide text-xs sm:text-sm md:text-base px-2 sm:px-4">
+                Explore Around
+              </p>
+              
+              {/* Right Border */}
+              <div className="flex flex-col items-start">
+                <div className="border-r-2 border-b-2 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 border-blue-600"></div>
+              </div>
+            </div>
           </div>
 
           {/* Bottom Content */}
-          <div className="mt-20 flex justify-center items-center gap-x-4 text-sm md:text-base">
+          <div className="mt-12 sm:mt-16 md:mt-20 flex justify-center items-center gap-x-2 sm:gap-x-4 text-xs sm:text-sm md:text-base">
             {slides.map((_, index) => (
               <p
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`cursor-pointer ${
-                  index === currentSlide ? "text-blue-500 font-bold" : ""
+                className={`cursor-pointer transition-colors duration-300 ${
+                  index === currentSlide
+                    ? "text-blue-500 font-bold"
+                    : "text-gray-400 hover:text-white"
                 }`}
               >
                 {`0${index + 1}`}
