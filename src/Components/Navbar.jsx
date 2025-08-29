@@ -45,7 +45,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="text-white fixed top-0 left-0 w-full z-50  bg-opacity-80 backdrop-blur-md">
+    <nav className="px-4 md:px-6 text-white fixed top-0 left-0 w-full z-50  bg-opacity-80 backdrop-blur-md">
       <div className="">
         {/* Desktop Navigation - Centered */}
         <div className="hidden lg:flex justify-center xl:justify-between items-center gap-x-8 xl:gap-x-20 py-4">

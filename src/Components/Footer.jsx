@@ -21,7 +21,13 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto text-center">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <Image src="/logo.svg" width={40} height={40} alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
+          <Image
+            src="/logo.svg"
+            width={40}
+            height={40}
+            alt="Logo"
+            className="w-8 h-8 sm:w-10 sm:h-10"
+          />
         </div>
 
         {/* Social Icons */}
@@ -34,9 +40,15 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="p-2 sm:p-3 bg-gray-800 hover:bg-blue-500 rounded-full transition-all duration-300 hover:scale-110"
             >
-              {key === "behance" && <FaBehance className="text-lg sm:text-xl" />}
-              {key === "linkedin" && <FaLinkedin className="text-lg sm:text-xl" />}
-              {key === "whatsapp" && <FaWhatsapp className="text-lg sm:text-xl" />}
+              {key === "behance" && (
+                <FaBehance className="text-lg sm:text-xl" />
+              )}
+              {key === "linkedin" && (
+                <FaLinkedin className="text-lg sm:text-xl" />
+              )}
+              {key === "whatsapp" && (
+                <FaWhatsapp className="text-lg sm:text-xl" />
+              )}
               {key === "github" && <FaGithub className="text-lg sm:text-xl" />}
             </a>
           ))}
@@ -47,7 +59,7 @@ const Footer = () => {
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
             Let's Collaborate
           </h3>
-          <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-6 max-w-2xl lg:max-w-xl mx-auto">
             I'm open to projects and collaborations. Let's build something
             amazing together!
           </p>
@@ -71,16 +83,23 @@ const Footer = () => {
               placeholder="Type your message..."
               className="w-full px-4 py-3 bg-transparent outline-none text-white placeholder-gray-400 text-sm sm:text-base"
             />
-            <a
-              href={`mailto:${
-                contactInfo.email
-              }?subject=Contact from Website&body=${encodeURIComponent(
-                message
-              )}`}
+            <button
+              type="button"
               className="px-4 sm:px-5 py-3 bg-blue-500 hover:bg-blue-600 transition-all duration-300 flex items-center justify-center text-sm sm:text-base font-medium"
+              onClick={() => {
+                if (message.trim()) {
+                  window.location.href = `mailto:${
+                    contactInfo.email
+                  }?subject=Contact from Website&body=${encodeURIComponent(
+                    message
+                  )}`;
+                } else {
+                  alert("Please enter a message before sending.");
+                }
+              }}
             >
               Send
-            </a>
+            </button>
           </div>
         </div>
 
@@ -90,7 +109,9 @@ const Footer = () => {
           <p className="text-gray-400 text-sm sm:text-base mb-1">
             Copyright &copy; {new Date().getFullYear()} Qezman
           </p>
-          <p className="text-gray-500 text-xs sm:text-sm">All Rights Reserved.</p>
+          <p className="text-gray-500 text-xs sm:text-sm">
+            All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
