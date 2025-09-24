@@ -43,10 +43,12 @@ const Projects = () => {
       category: "Web Development",
     },
     {
-      image: "/Calendly.png",
-      title: "Calendly",
-      desc: "This project replicates the Calendly website, using the React framework to showcase a beautiful and dynamic landing page. It demonstrates the implementation of modern UI elements and interactive features, closely mirroring the design and functionality of Calendly.",
-      tools: ["React, TailwindCSS"],
+      image: "/eduvolv.png",
+      title: "First Class Agile",
+      desc: "This webflow project showcases a platform offering PMP, ACP, etc training courses. The design emphasizes user engagement and provides information about the courses available.",
+      tools: ["Figma, Webflow"],
+      livelink:
+        "https://www.firstclassagile.com/category/first-class-pmp-r-training-only",
       category: "Web Development",
     },
 
