@@ -39,8 +39,7 @@ const Projects = () => {
       title: "Nightlife Management System",
       desc: "This website features a fully functional Nighlife Management System built with Figma, providing users with a seamless events booking.",
       tools: ["Figma"],
-      livelink:
-        "https://www.behance.net/gallery/235824403/TheMove-Nightlife",
+      livelink: "https://www.behance.net/gallery/235824403/TheMove-Nightlife",
       category: "UI/UX",
     },
 
@@ -52,15 +51,14 @@ const Projects = () => {
       livelink: "https://cookbook-final.vercel.app/",
       category: "Web Development",
     },
-    // {
-    //   image: "/eduvolv.png",
-    //   title: "First Class Agile",
-    //   desc: "This webflow project showcases a platform offering PMP, ACP, etc training courses. The design emphasizes user engagement and provides information about the courses available.",
-    //   tools: ["Figma, Webflow"],
-    //   livelink:
-    //     "https://www.firstclassagile.com/category/first-class-pmp-r-training-only",
-    //   category: "Web Development",
-    // },
+    {
+      image: "/eduvolv.png",
+      title: "First Class Agile",
+      desc: "This webflow project showcases a platform offering PMP, ACP, etc training courses. The design emphasizes user engagement and provides information about the courses available.",
+      tools: ["Figma, Webflow"],
+      livelink: "https://www.firstclassagile.com/",
+      category: "Web Development",
+    },
 
     {
       image: "/product-library.png",
@@ -155,9 +153,12 @@ const Projects = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">My Projects</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+              My Projects
+            </h1>
             <p className="text-gray-300 text-sm sm:text-base md:text-lg">
-              Featured and <span className="text-blue-400">Personal</span> Projects
+              Featured and <span className="text-blue-400">Personal</span>{" "}
+              Projects
             </p>
           </div>
 
@@ -203,8 +204,12 @@ const Projects = () => {
 
                     {/* Project Details */}
                     <div className="p-4 sm:p-6">
-                      <h2 className="text-lg sm:text-xl font-bold mb-2">{project.title}</h2>
-                      <p className="text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">{project.desc}</p>
+                      <h2 className="text-lg sm:text-xl font-bold mb-2">
+                        {project.title}
+                      </h2>
+                      <p className="text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">
+                        {project.desc}
+                      </p>
 
                       {/* Tools Used */}
                       <div className="flex flex-wrap gap-2">
