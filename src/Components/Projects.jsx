@@ -35,6 +35,16 @@ const Projects = () => {
     },
 
     {
+      image: "/Afrobeat.png",
+      title: "Nightlife Management System",
+      desc: "This website features a fully functional Nighlife Management System built with Figma, providing users with a seamless events booking.",
+      tools: ["Figma"],
+      livelink:
+        "https://www.behance.net/gallery/235824403/TheMove-Nightlife",
+      category: "UI/UX",
+    },
+
+    {
       image: "/cookbook.png",
       title: "Cookbook",
       desc: "A responsive recipe search app built with React, TypeScript, and TailwindCSS.",
@@ -42,15 +52,15 @@ const Projects = () => {
       livelink: "https://cookbook-final.vercel.app/",
       category: "Web Development",
     },
-    {
-      image: "/eduvolv.png",
-      title: "First Class Agile",
-      desc: "This webflow project showcases a platform offering PMP, ACP, etc training courses. The design emphasizes user engagement and provides information about the courses available.",
-      tools: ["Figma, Webflow"],
-      livelink:
-        "https://www.firstclassagile.com/category/first-class-pmp-r-training-only",
-      category: "Web Development",
-    },
+    // {
+    //   image: "/eduvolv.png",
+    //   title: "First Class Agile",
+    //   desc: "This webflow project showcases a platform offering PMP, ACP, etc training courses. The design emphasizes user engagement and provides information about the courses available.",
+    //   tools: ["Figma, Webflow"],
+    //   livelink:
+    //     "https://www.firstclassagile.com/category/first-class-pmp-r-training-only",
+    //   category: "Web Development",
+    // },
 
     {
       image: "/product-library.png",
