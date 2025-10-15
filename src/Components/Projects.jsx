@@ -20,7 +20,7 @@ const Projects = () => {
       image: "/comfy.png",
       title: "Comfy-Store Ecommerce",
       desc: "This website features a fully functional eCommerce store built with React and Next.js, providing users with a seamless shopping and ordering experience.",
-      tools: ["React, NextJs, TailwindCSS"],
+      tools: ["NextJs, TailwindCSS"],
       livelink: "https://comfy-store-ten-eta.vercel.app/",
       category: "Web Development",
     },
@@ -65,6 +65,14 @@ const Projects = () => {
       desc: "A two-page ecommerce concept built on Webflow’s free plan, showcasing a fully designed shopping flow — from product display to checkout and payment simulation — with CMS integration and responsive design.",
       tools: ["Webflow"],
       livelink: "https://kazeems-dynamite-site.webflow.io/",
+      category: "Web Design",
+    },
+    {
+      image: "/BlogHub.png",
+      title: "BlogHub",
+      desc: "A two-page blog concept built on Webflow’s free plan, showcasing a fully designed blog flow — reading blog articles — with CMS integration and responsive design.",
+      tools: ["Webflow"],
+      livelink: "https://kazeems-blog-site.webflow.io/",
       category: "Web Design",
     },
 
