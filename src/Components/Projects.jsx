@@ -63,7 +63,7 @@ const Projects = () => {
       image: "/StoreHub.png",
       title: "StoreHub",
       desc: "A two-page ecommerce concept built on Webflow’s free plan, showcasing a fully designed shopping flow — from product display to checkout and payment simulation — with CMS integration and responsive design.",
-      tools: ["Webflow"],
+      tools: ["Figma, Webflow"],
       livelink: "https://kazeems-dynamite-site.webflow.io/",
       category: "Web Design",
     },
