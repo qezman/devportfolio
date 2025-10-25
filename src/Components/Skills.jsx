@@ -33,7 +33,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white section-padding">
+    <section className="relative min-h-screen section-padding bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
@@ -50,7 +50,7 @@ const Skills = () => {
           {skillsData.map((skill) => (
             <div
               key={skill.title}
-              className="relative cursor-pointer bg-gradient-to-r from-gray-800 to-gray-700 rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 group p-6"
+              className="relative cursor-pointer rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 group p-6 bg-gradient-to-r from-gray-800 to-gray-700 backdrop-blur-md border border-white/10"
             >
               {/* Icon and Title */}
               <div className="text-center">

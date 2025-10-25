@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./Navbar";
 import Herosection from "./Herosection";
 import Services from "./Services";
 import Projects from "./Projects";
@@ -19,9 +18,8 @@ const Home = () => {
           backgroundImage: "url('/4.jpg')",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10">
-          <Navbar />
           <Herosection />
         </div>
       </div>

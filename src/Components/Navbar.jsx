@@ -45,13 +45,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="px-4 md:px-6 text-white fixed top-0 left-0 w-full z-50  bg-opacity-80 backdrop-blur-md">
+    <nav className="px-4 md:px-6 fixed top-0 left-0 w-full z-50 text-white bg-black/30 backdrop-blur-md border-b border-white/10">
       <div className="">
         {/* Desktop Navigation - Centered */}
         <div className="hidden lg:flex justify-center xl:justify-between items-center gap-x-8 xl:gap-x-20 py-4">
           {/* Logo */}
-          <div className="text-white font-bold">
-            <Image src="/logo.svg" alt="Logo" width={40} height={40} className="w-8 h-8 md:w-10 md:h-10" />
+          <div className="font-bold">
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="w-8 h-8 md:w-10 md:h-10"
+            />
           </div>
 
           {/* Navbar Links - Centered */}
@@ -71,14 +77,14 @@ const Navbar = () => {
           </ul>
 
           {/* Social Icons */}
-          <div className="flex gap-2 md:gap-3 lg:gap-4">
+          <div className="flex items-center gap-2 md:gap-3 lg:gap-4">
             {Object.entries(contactInfo.socialLinks).map(([key, link], index) => (
               <a
                 key={index}
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 md:p-3 hover:bg-blue-500 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                className="p-2 md:p-3 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg bg-white/0 hover:bg-blue-500/90 text-current"
               >
                 {key === "behance" && <FaBehance className="text-lg md:text-xl" />}
                 {key === "linkedin" && <FaLinkedin className="text-lg md:text-xl" />}
@@ -92,17 +98,27 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         <div className="lg:hidden flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="text-white font-bold">
-            <Image src="/logo.svg" alt="Logo" width={32} height={32} className="w-8 h-8" />
+          <div className="font-bold">
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8"
+            />
           </div>
 
           {/* Mobile Menu Button */}
           <div
-            className="flex items-center gap-x-2 bg-blue-800 rounded-lg px-3 py-2 cursor-pointer hover:bg-blue-700 transition-all duration-300 hover:scale-105"
+            className="flex items-center gap-x-2 bg-blue-600 dark:bg-blue-800 rounded-lg px-3 py-2 cursor-pointer hover:bg-blue-500 dark:hover:bg-blue-700 transition-all duration-300 hover:scale-105"
             onClick={handleDropdownToggle}
           >
             <p className="font-semibold tracking-wide text-sm">Menu</p>
-            {isDropDownOpen ? <FaTimes className="text-sm" /> : <FaBars className="text-sm" />}
+            {isDropDownOpen ? (
+              <FaTimes className="text-sm" />
+            ) : (
+              <FaBars className="text-sm" />
+            )}
           </div>
         </div>
 
@@ -110,7 +126,7 @@ const Navbar = () => {
         {isDropDownOpen && (
           <div
             ref={dropdownRef}
-            className="absolute top-full left-0 w-full bg-blue-900 bg-opacity-95 text-white flex flex-col items-center space-y-4 p-6 lg:hidden shadow-lg border-t border-blue-700 backdrop-blur-md"
+            className="absolute top-full left-0 w-full bg-black/80 text-white flex flex-col items-center space-y-4 p-6 lg:hidden shadow-lg border-t border-white/10 backdrop-blur-md"
           >
             {["Home", "About", "Projects", "Contact"].map((item, index) => (
               <a
@@ -122,16 +138,16 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            
+
             {/* Mobile Social Icons */}
-            <div className="flex gap-4 pt-4 border-t border-blue-700 w-full justify-center">
+            <div className="flex gap-4 pt-4 border-t border-white/10 w-full justify-center">
               {Object.entries(contactInfo.socialLinks).map(([key, link], index) => (
                 <a
                   key={index}
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 hover:bg-blue-500 rounded-full transition-all duration-300"
+                  className="p-2 rounded-full transition-all duration-300 hover:bg-blue-500/90"
                 >
                   {key === "behance" && <FaBehance className="text-lg" />}
                   {key === "linkedin" && <FaLinkedin className="text-lg" />}

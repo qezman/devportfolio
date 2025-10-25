@@ -26,17 +26,18 @@ const FAQs = () => {
   ];
   return (
     <section
-      className="relative h-auto bg-cover w-full bg-center p-4 text-white xl:px-80"
+      className="relative h-auto bg-cover w-full bg-center p-4 xl:px-80 text-white"
       style={{
         backgroundImage: "url('/testimonial-bg.jpg')",
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
       <div className="relative z-10 my-20 px-4">
+
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="text-3xl font-bold">Frequently Asked Questions</h1>
-          <p className="text-gray-400 mt-3">
+          <p className="text-gray-300 mt-3">
             Find answers to common UX/UI questions below.
           </p>
         </div>
@@ -48,10 +49,10 @@ const FAQs = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="p-5 bg-gray-800 rounded-lg shadow-md"
+              className="p-5 rounded-lg shadow-md bg-gray-800/80 backdrop-blur-md border border-white/10"
             >
               <div
-                className="flex justify-between items-center cursor-pointer hover:bg-gray-700 p-3 rounded-lg transition duration-300"
+                className="flex justify-between items-center cursor-pointer p-3 rounded-lg transition duration-300 hover:bg-gray-700"
                 onClick={() => handleToggle(index)}
               >
                 <p className="text-lg font-medium">{query.question}</p>

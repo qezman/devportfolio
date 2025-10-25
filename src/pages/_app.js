@@ -2,6 +2,16 @@ import Head from "next/head";
 import Layout from "../Components/Layout";
 import ScrollToSection from "../Components/ScrollToSection";
 import "../styles/globals.css";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,16 +19,33 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Kazeem | Portfolio</title>
         <meta name="portfolio" content="Kazeem | Portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+        />
         <meta property="og:image" content="/1.jpg" />
         <link rel="icon" href="/5.jpg" />
         <meta name="theme-color" content="#1f2937" />
-        <meta name="description" content="Kazeem Jimoh - Web Developer & Designer Portfolio" />
+        <meta
+          name="description"
+          content="Kazeem Jimoh - Web Developer & Designer Portfolio"
+        />
       </Head>
-      <Layout>
-        <ScrollToSection />
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <div className={`${inter.variable} font-sans`}>
+          <Layout>
+            <ScrollToSection />
+            <Component {...pageProps} />
+          </Layout>
+          <ToastContainer
+            position="top-right"
+            newestOnTop
+            closeOnClick
+            pauseOnHover
+            theme="colored"
+          />
+        </div>
+      </ThemeProvider>
     </>
   );
 }
