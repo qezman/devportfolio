@@ -63,7 +63,7 @@ const Services = () => {
               My Services
             </h3>
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tracking-wider">
-              Things I do?
+              Things I do
             </h1>
             <hr className="border-4 border-b w-12 md:w-16 border-blue-500 mx-auto" />
             <p className="mt-6 md:mt-8 text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">

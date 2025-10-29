@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { FaAngleDown, FaExternalLinkAlt } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp, FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
 import ProjectPreview from "./ProjectPreview";
 
@@ -204,7 +204,9 @@ const Projects = () => {
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white dark:text-white">
               My Projects
             </h1>
-            <p className="text-gray-300 text-sm sm:text-base md:text-xl dark:text-gray-400">
+            <hr className="border-4 border-b w-12 md:w-16 border-blue-500 mx-auto" />
+
+            <p className="mt-3 text-gray-300 text-sm sm:text-base md:text-xl dark:text-gray-400">
               Featured and <span className="text-blue-400">Personal</span>{" "}
               Projects
             </p>
@@ -283,17 +285,29 @@ const Projects = () => {
                       </div>
                     </div>
 
-                    {/* Live Link Icon */}
-                    {project.livelink && (
-                      <a
-                        href={project.livelink}
+                    {/* Live & Prototype Link Icons */}
+                    <div className="absolute bottom-4 right-4 flex gap-3">
+                      {project.livelink && (
+                        <a
+                          href={project.livelink}
+                          target="_blank"
+                          className="text-white hover:text-blue-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/60 rounded-full"
+                          rel="noopener noreferrer"
+                          title="View Live Project"
+                        >
+                          <FaExternalLinkAlt className="text-lg sm:text-xl" />
+                        </a>
+                      )}
+                      {/* <a
+                        href="/prototypes"
                         target="_blank"
-                        className="absolute bottom-4 right-4 text-white hover:text-blue-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/60 rounded-full"
+                        className="text-white hover:text-green-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400/60 rounded-full"
                         rel="noopener noreferrer"
+                        title="View Interactive Prototype"
                       >
-                        <FaExternalLinkAlt className="text-lg sm:text-xl" />
-                      </a>
-                    )}
+                        <FaAngleUp className="text-lg sm:text-xl" />
+                      </a> */}
+                    </div>
                   </motion.div>
                 ))}
             </AnimatePresence>

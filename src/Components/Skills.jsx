@@ -40,7 +40,9 @@ const Skills = () => {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-4">
             My Skills
           </h1>
-          <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+          <hr className="border-4 border-b w-12 md:w-16 border-blue-500 mx-auto" />
+
+          <p className="mt-3 text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             A showcase of my technical expertise and tools I work with.
           </p>
         </div>
