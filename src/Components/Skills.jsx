@@ -13,7 +13,9 @@ import {
   SiJavascript,
   SiWebflow,
   SiWix,
+  
 } from "react-icons/si";
+// import Builder from "/builder.png"
 import { useState } from "react";
 
 const Skills = () => {
@@ -28,8 +30,9 @@ const Skills = () => {
     { title: "Next.JS", percent: 80, icon: SiNextdotjs },
     { title: "Webflow", percent: 90, icon: SiWebflow },
     { title: "Adobe XD", percent: 85, icon: SiAdobexd },
-    { title: "Framer", percent: 85, icon: SiFramer },
+    { title: "Framer", percent: 95, icon: SiFramer },
     { title: "Wix", percent: 85, icon: SiWix },
+    // { title: "Builder.io", percent: 95, icon: Builder },
   ];
 
   return (
