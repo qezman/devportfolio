@@ -234,7 +234,7 @@ const Projects = () => {
 
           {/* Projects Grid */}
           <motion.div
-            className="grid md:grid-cols-2 md:gap-6 lg:grid-cols-3"
+            className="grid gap-6 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
             variants={containerVariants}
             initial="hidden"
             animate="show"
