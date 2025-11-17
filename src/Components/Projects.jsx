@@ -21,6 +21,14 @@ const Projects = () => {
       poster: "/horizon.png",
     },
     {
+      image: "/Nebula.png",
+      title: "Horizon Analytics",
+      desc: "A clean, modern template marketplace built using Figma, Builder.io Fusion, and Next.js, with fully routed template pages and a smooth, responsive UI.",
+      tools: ["Figma, Builder.io, NextJs, TailwindCSS"],
+      livelink: "https://builder-nebula-orbit.vercel.app/",
+      category: "Web Development",
+    },
+    {
       image: "/Afrobeat.png",
       title: "Nightlife Management System",
       desc: "This website features a fully functional Nighlife Management System built with Figma, providing users with a seamless events booking.",
@@ -53,15 +61,6 @@ const Projects = () => {
       tools: ["React, TailwindCSS, Typescript"],
       livelink: "https://cookbook-final.vercel.app/",
       category: "Web Development",
-    },
-
-    {
-      image: "/eduvolv.png",
-      title: "First Class Agile",
-      desc: "This webflow project showcases a platform offering PMP, ACP, etc training courses. The design emphasizes user engagement and provides information about the courses available.",
-      tools: ["Figma, Webflow"],
-      livelink: "https://www.firstclassagile.com/",
-      category: "Web Design",
     },
     {
       image: "/StoreHub.png",
@@ -123,17 +122,8 @@ const Projects = () => {
       livelink:
         "https://www.behance.net/gallery/181787301/E-learning-Mobile-App",
     },
-    // {
-    //   image: "/gtco.png",
-    //   title: "GTCO",
-    //   desc: "This project is a redesign of the GTCO Food and Drink and Fashion Week, focusing on improving various pages to ensure users experience a friendly UI and seamless applications where applicable.",
-    //   tools: ["Figma"],
-    //   category: "UI/UX",
-    //   livelink:
-    //     "https://www.behance.net/gallery/186960521/GTCO-Redesign-Mobile-App",
-    // },
     {
-      image: "Pay4MeApp.jpeg",
+      image: "/Pay4MeApp.jpeg",
       title: "Pay4MeApp Redesign",
       desc: "This project is a landing page redesign, showcasing vibrant colors and a modern e-commerce layout.",
       tools: ["Figma"],
