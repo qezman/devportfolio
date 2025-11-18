@@ -22,7 +22,7 @@ const Projects = () => {
     },
     {
       image: "/Nebula.png",
-      title: "Horizon Analytics",
+      title: "Nebula",
       desc: "A clean, modern template marketplace built using Figma, Builder.io Fusion, and Next.js, with fully routed template pages and a smooth, responsive UI.",
       tools: ["Figma, Builder.io, NextJs, TailwindCSS"],
       livelink: "https://builder-nebula-orbit.vercel.app/",
