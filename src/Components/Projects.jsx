@@ -6,10 +6,28 @@ import ProjectPreview from "./ProjectPreview";
 
 const Projects = () => {
   // Project Categories
-  const categories = ["All", "Web Design", "Web Development", "UI/UX"];
+  const categories = ["All", "Web Development", "UI/UX","Web Design",];
 
   // Project Data with Category Tags
   const projects = [
+    {
+      image: "/Exchange.png",
+      title: "EasyFX Currency Exchange Platform",
+      desc: "A clean, mobile-first fintech experience for seamless currency exchange. Includes onboarding, KYC, dashboard, transaction history & a focused design system.",
+      tools: ["Figma, Framer"],
+      category: "UI/UX",
+      caseStudy: "https://www.behance.net/gallery/239891765/EasyFX-(Currency-Exchange)",
+      livelink:
+        "https://sincere-trip-685573.framer.app/",
+    },
+    {
+      image: "/Nebula.png",
+      title: "Nebula",
+      desc: "A clean, modern template marketplace built using Figma, Builder.io Fusion, and Next.js, with fully routed template pages and a smooth, responsive UI.",
+      tools: ["Figma, Builder.io, NextJs, TailwindCSS"],
+      livelink: "https://builder-nebula-orbit.vercel.app/",
+      category: "Web Development",
+    },
     {
       image: "/horizon.png",
       title: "Horizon Analytics",
@@ -21,19 +39,12 @@ const Projects = () => {
       poster: "/horizon.png",
     },
     {
-      image: "/Nebula.png",
-      title: "Nebula",
-      desc: "A clean, modern template marketplace built using Figma, Builder.io Fusion, and Next.js, with fully routed template pages and a smooth, responsive UI.",
-      tools: ["Figma, Builder.io, NextJs, TailwindCSS"],
-      livelink: "https://builder-nebula-orbit.vercel.app/",
-      category: "Web Development",
-    },
-    {
       image: "/Afrobeat.png",
       title: "Nightlife Management System",
       desc: "This website features a fully functional Nighlife Management System built with Figma, providing users with a seamless events booking.",
       tools: ["Figma"],
-      livelink: "https://www.behance.net/gallery/235824403/TheMove-Nightlife",
+      livelink: "https://www.figma.com/proto/9G2xr7CJYYNVmVzr8DLJ6d/TheMove-Pro?node-id=24-29&p=f&t=evorbEj1id0S2KPL-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=48%3A717",
+      caseStudy: "https://www.behance.net/gallery/235824403/TheMove-Nightlife",
       category: "UI/UX",
     },
     {
@@ -86,15 +97,6 @@ const Projects = () => {
       tools: ["React, Typescript, TailwindCSS"],
       livelink: "https://product-library-elyu.vercel.app/",
       category: "Web Development",
-    },
-    {
-      image: "/Currency-exchange.png",
-      title: "EasyFX Currency Exchange Platform",
-      desc: " This project a full case study and desgin of a exchanging currencies seamlessly with a focus on user experience and user interface design.",
-      tools: ["Figma"],
-      category: "UI/UX",
-      livelink:
-        "https://www.behance.net/gallery/222597099/EasyFX-Currency-Exchange-Platform",
     },
     {
       image: "/motivv.png",
@@ -263,41 +265,49 @@ const Projects = () => {
                       </p>
 
                       {/* Tools Used */}
-                      <div className="flex flex-wrap gap-2">
-                        {project.tools.map((tool, toolIndex) => (
-                          <span
-                            key={toolIndex}
-                            className="px-2 py-1 rounded text-xs sm:text-sm bg-white/10 border border-white/10 text-white/90"
-                          >
-                            {tool}
-                          </span>
-                        ))}
+                      <div className="flex items-center justify-between mt-4 w-full">
+                        <div className="flex flex-wrap gap-2 flex-1">
+                          {project.tools.map((tool, toolIndex) => (
+                            <span
+                              key={toolIndex}
+                              className="px-2 py-1 rounded text-xs sm:text-sm bg-white/10 border border-white/10 text-white/90"
+                            >
+                              {tool}
+                            </span>
+                          ))}
+                        </div>
                       </div>
+
+                      <aside className="mt-4 flex justify-between items-center">
+                        <div className="flex gap-2 items-center">
+                          {project.caseStudy && (
+                            <a
+                              href={project.caseStudy}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="gap-x-1 flex items-center text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                              title="View Case Study"
+                            >
+                              <span>View Case Study</span>
+                              <FaExternalLinkAlt className="text-xs" />
+                            </a>
+                          )}
+                        </div>
+                        
+                        {project.livelink && (
+                          <a
+                            href={project.livelink}
+                            target="_blank"
+                            className="text-white hover:text-blue-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/60 rounded-full"
+                            rel="noopener noreferrer"
+                            title="View Live Project"
+                          >
+                            <FaExternalLinkAlt className="text-lg sm:text-xl" />
+                          </a>
+                        )}
+                      </aside>
                     </div>
 
-                    {/* Live & Prototype Link Icons */}
-                    <div className="absolute bottom-4 right-4 flex gap-3">
-                      {project.livelink && (
-                        <a
-                          href={project.livelink}
-                          target="_blank"
-                          className="text-white hover:text-blue-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/60 rounded-full"
-                          rel="noopener noreferrer"
-                          title="View Live Project"
-                        >
-                          <FaExternalLinkAlt className="text-lg sm:text-xl" />
-                        </a>
-                      )}
-                      {/* <a
-                        href="/prototypes"
-                        target="_blank"
-                        className="text-white hover:text-green-400 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400/60 rounded-full"
-                        rel="noopener noreferrer"
-                        title="View Interactive Prototype"
-                      >
-                        <FaAngleUp className="text-lg sm:text-xl" />
-                      </a> */}
-                    </div>
                   </motion.div>
                 ))}
             </AnimatePresence>
