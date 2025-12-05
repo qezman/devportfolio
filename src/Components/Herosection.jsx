@@ -10,7 +10,7 @@ const Herosection = () => {
   // Carousel content
   const slides = [
     {
-      image: "/zeem-1.jpeg",
+      image: "/zeem-2.jpeg",
       title: "Hey there, I'm Kazeem!",
       subtitle: "A Passionate Web Developer & Designer",
     },
