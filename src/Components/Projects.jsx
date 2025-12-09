@@ -29,6 +29,15 @@ const Projects = () => {
       category: "Web Development",
     },
     {
+      image: "/Afrobeat.png",
+      title: "Nightlife Management System",
+      desc: "This website features a fully functional Nighlife Management System built with Figma, providing users with a seamless events booking.",
+      tools: ["Figma"],
+      livelink: "https://www.figma.com/proto/9G2xr7CJYYNVmVzr8DLJ6d/TheMove-Pro?node-id=24-29&p=f&t=evorbEj1id0S2KPL-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=48%3A717",
+      caseStudy: "https://www.behance.net/gallery/235824403/TheMove-Nightlife",
+      category: "UI/UX",
+    },
+    {
       image: "/horizon.png",
       title: "Horizon Analytics",
       desc: "Horizon Analytics is a sleek SaaS-style portfolio project built in Framer, showcasing a data intelligence platform with dynamic CMS-powered blog content, interactive animations, and a clean, responsive design that highlights both design and front-end development skills.",
@@ -37,15 +46,6 @@ const Projects = () => {
       category: "Web Design",
       video: "/videos/horizon-preview.mp4",
       poster: "/horizon.png",
-    },
-    {
-      image: "/Afrobeat.png",
-      title: "Nightlife Management System",
-      desc: "This website features a fully functional Nighlife Management System built with Figma, providing users with a seamless events booking.",
-      tools: ["Figma"],
-      livelink: "https://www.figma.com/proto/9G2xr7CJYYNVmVzr8DLJ6d/TheMove-Pro?node-id=24-29&p=f&t=evorbEj1id0S2KPL-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=48%3A717",
-      caseStudy: "https://www.behance.net/gallery/235824403/TheMove-Nightlife",
-      category: "UI/UX",
     },
     {
       image: "/comfy.png",
