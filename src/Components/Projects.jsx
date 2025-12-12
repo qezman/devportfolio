@@ -31,7 +31,7 @@ const Projects = () => {
     {
       image: "/Afrobeat.png",
       title: "Nightlife Management System",
-      desc: "This website features a fully functional Nighlife Management System built with Figma, providing users with a seamless events booking.",
+      desc: "This website features a fully functional Nightlife Management System built with Figma, providing users with a seamless events booking.",
       tools: ["Figma"],
       livelink: "https://www.figma.com/proto/9G2xr7CJYYNVmVzr8DLJ6d/TheMove-Pro?node-id=24-29&p=f&t=evorbEj1id0S2KPL-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=48%3A717",
       caseStudy: "https://www.behance.net/gallery/235824403/TheMove-Nightlife",
@@ -76,7 +76,7 @@ const Projects = () => {
     {
       image: "/StoreHub.png",
       title: "StoreHub",
-      desc: "A two-page ecommerce concept built on Webflow’s free plan, showcasing a fully designed shopping flow — from product display to checkout and payment simulation — with CMS integration and responsive design.",
+      desc: "A two-page ecommerce concept built on Webflow’s free plan, showcasing a fully designed shopping flow, from product display to checkout and payment simulation, with CMS integration and responsive design.",
       tools: ["Figma, Webflow"],
       livelink: "https://kazeems-dynamite-site.webflow.io/",
       category: "Web Design",
@@ -84,7 +84,7 @@ const Projects = () => {
     {
       image: "/BlogHub.png",
       title: "BlogHub",
-      desc: "A two-page blog concept built on Webflow’s free plan, showcasing a fully designed blog flow — reading blog articles — with CMS integration and responsive design.",
+      desc: "A two-page blog concept built on Webflow’s free plan, showcasing a fully designed blog flow, reading blog articles, with CMS integration and responsive design.",
       tools: ["Webflow"],
       livelink: "https://kazeems-blog-site.webflow.io/",
       category: "Web Design",
