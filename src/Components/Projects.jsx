@@ -199,7 +199,7 @@ const Projects = () => {
             <hr className="border-4 border-b w-12 md:w-16 border-blue-500 mx-auto" />
 
             <p className="mt-3 text-gray-300 text-sm sm:text-base md:text-xl dark:text-gray-400">
-              Featured and <span className="text-blue-400">Personal</span>{" "}
+              Some of My <span className="text-blue-400">Projects</span>{" "}
               Projects
             </p>
           </div>
