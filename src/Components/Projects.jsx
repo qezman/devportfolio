@@ -91,11 +91,11 @@ const Projects = () => {
     },
 
     {
-      image: "/product-library.png",
-      title: "ProductLib",
-      desc: "A responsive products search app built with React, TypeScript, and TailwindCSS.",
-      tools: ["React, Typescript, TailwindCSS"],
-      livelink: "https://product-library-elyu.vercel.app/",
+      image: "/auth.png",
+      title: "Auth-flow",
+      desc: "A simple authentication flow built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS.",
+      tools: ["NextJs, Typescript, TailwindCSS"],
+      livelink: "https://authentication-flow-zeta.vercel.app/",
       category: "Web Development",
     },
     {
