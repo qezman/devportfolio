@@ -21,6 +21,14 @@ const Projects = () => {
         "https://sincere-trip-685573.framer.app/",
     },
     {
+      image: "/auth.png",
+      title: "Auth-flow",
+      desc: "A simple authentication flow built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS.",
+      tools: ["NextJs, Typescript, TailwindCSS"],
+      livelink: "https://authentication-flow-zeta.vercel.app/",
+      category: "Web Development",
+    },
+    {
       image: "/Nebula.png",
       title: "Nebula",
       desc: "A clean, modern template marketplace built using Figma, Builder.io Fusion, and Next.js, with fully routed template pages and a smooth, responsive UI.",
@@ -90,14 +98,6 @@ const Projects = () => {
       category: "Web Design",
     },
 
-    {
-      image: "/auth.png",
-      title: "Auth-flow",
-      desc: "A simple authentication flow built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS.",
-      tools: ["NextJs, Typescript, TailwindCSS"],
-      livelink: "https://authentication-flow-zeta.vercel.app/",
-      category: "Web Development",
-    },
     {
       image: "/motivv.png",
       title: "Mottiv",
