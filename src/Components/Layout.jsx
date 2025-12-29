@@ -2,6 +2,7 @@
 
 import React from "react";
 import Navbar from "./Navbar";
+import StickyCvButton from "./StickyCvButton";
 
 const Layout = ({ children }) => {
   console.log(children);
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
         <Navbar />
       </nav>
       <main className="flex-1 w-full">{children}</main>
+      <StickyCvButton />
     </div>
   );
 };
