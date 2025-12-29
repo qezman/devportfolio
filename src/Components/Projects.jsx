@@ -24,7 +24,7 @@ const Projects = () => {
       image: "/auth.png",
       title: "Auth-flow",
       desc: "A simple authentication flow built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS.",
-      tools: ["NextJs, Typescript, TailwindCSS"],
+      tools: ["Figma, NextJs, Typescript, TailwindCSS"],
       livelink: "https://authentication-flow-zeta.vercel.app/",
       category: "Web Development",
     },
