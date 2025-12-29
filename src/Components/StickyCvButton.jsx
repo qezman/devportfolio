@@ -11,7 +11,7 @@ export default function StickyCvButton() {
       href="/cv.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      className={`${commonClasses} bg-blue-800 hover:bg-blue-700 text-white transition-transform duration-300 hover:scale-105`}
+      className={`${commonClasses} sm:hidden md:block md:bg-blue-800 md:hover:bg-blue-700 text-white transition-transform duration-300 md:hover:scale-105`}
       aria-label="View my CV (opens in a new tab)"
     >
       <div className="flex items-center gap-3 pl-4 pr-5 py-3">
