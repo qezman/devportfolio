@@ -20,6 +20,15 @@ const Projects = () => {
       livelink:
         "https://sincere-trip-685573.framer.app/",
     },
+    
+    {
+      image: "/Vendors.png",
+      title: "Multi-Vendor Site",
+      desc: "This project demonstrates a simplified multi-vendor storefront system built with Next.js App Router while supporting light and dark modes.",
+      tools: ["NextJs, Typescript, TailwindCSS"],
+      livelink: "https://multi-vendor-liard.vercel.app/",
+      category: "Web Development",
+    },
     {
       image: "/auth.png",
       title: "Auth-flow",
@@ -55,14 +64,14 @@ const Projects = () => {
       video: "/videos/horizon-preview.mp4",
       poster: "/horizon.png",
     },
-    {
-      image: "/comfy.png",
-      title: "Comfy-Store Ecommerce",
-      desc: "This website features a fully functional eCommerce store built with React and Next.js, providing users with a seamless shopping and ordering experience.",
-      tools: ["NextJs, TailwindCSS"],
-      livelink: "https://comfy-store-ten-eta.vercel.app/",
-      category: "Web Development",
-    },
+    // {
+    //   image: "/comfy.png",
+    //   title: "Comfy-Store Ecommerce",
+    //   desc: "This website features a fully functional eCommerce store built with React and Next.js, providing users with a seamless shopping and ordering experience.",
+    //   tools: ["NextJs, TailwindCSS"],
+    //   livelink: "https://comfy-store-ten-eta.vercel.app/",
+    //   category: "Web Development",
+    // },
     {
       image: "/ecommerce-gadget.png",
       title: "Ecommerce Gadget Store",
