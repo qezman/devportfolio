@@ -8,7 +8,7 @@ export default function StickyCvButton() {
 
   return (
     <a
-      href="/cv.pdf"
+      href="/CV.pdf"
       target="_blank"
       rel="noopener noreferrer"
       className={`${commonClasses} sm:hidden md:block md:bg-blue-800 md:hover:bg-blue-700 text-white transition-transform duration-300 md:hover:scale-105`}
