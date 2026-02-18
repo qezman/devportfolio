@@ -20,6 +20,16 @@ const Projects = () => {
       livelink:
         "https://sincere-trip-685573.framer.app/",
     },
+
+    {
+      image: "cryptoNow.png",
+      title: "CryptoNow.ng",
+      desc: "Collaborated in developing a user website for the cryptocurrency exchange used by crypto traders",
+      tools: ["React, Tanstack, Typescript, TailwindCSS"],
+      category: "Web Development",
+      livelink:
+        "https://cryptonow.ng/",
+    },
     
     {
       image: "/Vendors.png",
