@@ -1,11 +1,10 @@
-"use client";
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { FaBehance, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const contactInfo = {
-  email: "your-email@example.com",
+  email: "contatctqossim@gmail.com",
   socialLinks: {
     behance: "https://www.behance.net/jimohkazeem",
     linkedin: "https://www.linkedin.com/in/kazeem-jimoh-027a3b21a/",
@@ -128,8 +127,8 @@ const Footer = () => {
               />
               <input
                 type="email"
-                required
                 value={email}
+                required
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email"
                 className="px-4 py-3 bg-transparent outline-none text-white placeholder-gray-400 text-sm sm:text-base rounded-lg border border-gray-600"

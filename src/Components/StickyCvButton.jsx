@@ -1,5 +1,3 @@
-"use client";
-
 import { FaFilePdf } from "react-icons/fa";
 
 export default function StickyCvButton() {

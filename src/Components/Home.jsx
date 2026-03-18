@@ -1,11 +1,12 @@
 import React from "react";
 import Herosection from "./Herosection";
 import Services from "./Services";
-import Projects from "./Projects";
+import ProductDesignProjects from "./ProductDesignProjects";
+import FrontendProjects from "./FrontendProjects";
+import CloudDevOpsProjects from "./CloudDevOpsProjects";
 import Skills from "./Skills";
 import PreFooter from "./Prefooter";
 import Footer from "./Footer";
-import FAQs from "./FAQs";
 
 const Home = () => {
   return (
@@ -29,8 +30,16 @@ const Home = () => {
         <Services />
       </section>
 
-      <section id="projects" className="w-full">
-        <Projects />
+      <section id="cloud-&-devops" className="w-full">
+        <CloudDevOpsProjects />
+      </section>
+
+      <section id="product-design" className="w-full">
+        <ProductDesignProjects />
+      </section>
+
+      <section id="frontend-projects" className="w-full">
+        <FrontendProjects />
       </section>
 
       <section id="skills" className="w-full">
@@ -38,7 +47,6 @@ const Home = () => {
       </section>
 
       <div className="w-full">
-        <FAQs />
         <PreFooter />
         <section id="contact" className="w-full">
           <Footer />

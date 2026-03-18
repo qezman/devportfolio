@@ -23,8 +23,12 @@ const Herosection = () => {
       subtitle: "Creating Exceptional User Interfaces",
     },
     {
-      title: "Creative Thinker",
-      subtitle: "Building Innovative Web Experiences",
+      title: "Cloud & DevOps Engineer",
+      subtitle: "Building Scalable Infrastructure Solutions",
+    },
+    {
+      title: "Full-Stack Creator",
+      subtitle: "From Design to Deployment",
     },
     {
       title: "Problem Solver",

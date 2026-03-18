@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Layout from "../Components/Layout";
-import ScrollToSection from "../Components/ScrollToSection";
 import "../styles/globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
@@ -28,13 +27,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#1f2937" />
         <meta
           name="description"
-          content="Kazeem Jimoh - Web Developer & Designer Portfolio"
+          content="Kazeem Jimoh - Cloud Engineer Portfolio"
         />
       </Head>
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
         <div className={`${inter.variable} font-sans`}>
           <Layout>
-            <ScrollToSection />
             <Component {...pageProps} />
           </Layout>
           <ToastContainer

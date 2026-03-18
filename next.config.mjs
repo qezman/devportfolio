@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // static export for `next build` -> generates `out/`
-  output: 'export',
+  // Remove output export for development
+  // output: 'export', // Comment out for development
   images: {
     // Disable Next's Image Optimization API when exporting static site
     unoptimized: true,

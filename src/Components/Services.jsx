@@ -5,45 +5,49 @@ import {
   FaGlobe,
   FaReact,
   FaCode,
+  FaCloud,
+  FaServer,
+  FaShieldAlt,
+  FaNetworkWired,
 } from "react-icons/fa";
 
 const Services = () => {
   const allServices = [
     {
-      title: "Responsive web design",
+      title: "Product Design",
       subtitle:
-        "Crafting beautiful and user-friendly interfaces that work seamlessly on various devices.",
-      icon: <FaLaptopCode />,
-    },
-    {
-      title: "Modern UI/UX Development",
-      subtitle:
-        "Creating intuitive and engaging user experiences with a focus on the latest design trends.",
+        "Creating intuitive user experiences with research-driven design principles and modern UI patterns.",
       icon: <FaPaintBrush />,
     },
     {
-      title: "Performance optimization",
+      title: "Frontend Development",
       subtitle:
-        "Optimizing websites for speed and efficiency to ensure a smooth user experience.",
-      icon: <FaTachometerAlt />,
-    },
-    {
-      title: "Cross-browser compatibility",
-      subtitle:
-        "Ensuring your website looks and functions consistently across different browsers.",
-      icon: <FaGlobe />,
-    },
-    {
-      title: "Frontend framework mastery",
-      subtitle:
-        "Specializing in scalable, component-driven development with React and Next.js, leveraging TypeScript for type safety, maintainability, and developer productivity.",
+        "Building responsive, performant web applications using React, Next.js, and modern JavaScript frameworks.",
       icon: <FaReact />,
     },
     {
-      title: "Code quality and maintainability",
+      title: "Cloud Infrastructure",
       subtitle:
-        "Writing clean, maintainable, and scalable code to enhance the longevity of your projects.",
-      icon: <FaCode />,
+        "Designing and implementing scalable cloud solutions using AWS, Terraform, and Infrastructure-as-Code principles.",
+      icon: <FaCloud />,
+    },
+    {
+      title: "DevOps & Automation",
+      subtitle:
+        "Automating deployment pipelines, server configuration, and infrastructure management for production-ready systems.",
+      icon: <FaServer />,
+    },
+    {
+      title: "Security & Hardening",
+      subtitle:
+        "Implementing security best practices, system hardening, and access control for robust infrastructure.",
+      icon: <FaShieldAlt />,
+    },
+    {
+      title: "Network Architecture",
+      subtitle:
+        "Designing secure, scalable network architectures with load balancing, auto-scaling, and high availability.",
+      icon: <FaNetworkWired />,
     },
   ];
 
@@ -92,7 +96,7 @@ const Services = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="responsive-grid">
+          <div className="responsive-grid mb-16">
             {allServices.map((service, index) => (
               <div
                 key={service.title}
@@ -109,6 +113,46 @@ const Services = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Cloud & DevOps Journey Section */}
+          <div className="mt-16 pt-16 border-t border-white/10">
+            <div className="text-center mb-12">
+              <h3 className="tracking-wide text-xl sm:text-2xl md:text-3xl mb-2 text-blue-400">
+                Cloud & DevOps Journey
+              </h3>
+              <hr className="border-4 border-b w-12 md:w-16 border-blue-500 mx-auto mb-6" />
+              <p className="text-gray-200 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+                Recently, I have been expanding my engineering foundation into Cloud Computing and DevOps. 
+                I enjoy building and documenting infrastructure projects involving Linux administration, AWS infrastructure, 
+                and Infrastructure-as-Code using Terraform.
+              </p>
+            </div>
+
+            {/* Journey Highlights */}
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-white/10">
+                <FaCloud className="text-3xl text-blue-400 mx-auto mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Cloud Architecture</h4>
+                <p className="text-gray-300 text-sm">
+                  Designing scalable AWS solutions with high availability and security best practices
+                </p>
+              </div>
+              <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-white/10">
+                <FaServer className="text-3xl text-blue-400 mx-auto mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Infrastructure as Code</h4>
+                <p className="text-gray-300 text-sm">
+                  Automating infrastructure provisioning and management using Terraform
+                </p>
+              </div>
+              <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-white/10">
+                <FaShieldAlt className="text-3xl text-blue-400 mx-auto mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Security & DevOps</h4>
+                <p className="text-gray-300 text-sm">
+                  Implementing security hardening and deployment automation for production systems
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
