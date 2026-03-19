@@ -60,18 +60,19 @@ const Footer = () => {
         {/* Collaboration Section */}
         <div className="mb-8 sm:mb-12">
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
-            Let's Collaborate
+            Let’s Build & Deploy Together
           </h3>
           <p className="text-gray-400 text-sm sm:text-base mb-6 max-w-2xl lg:max-w-xl mx-auto">
-            I'm open to projects and collaborations. Let's build something
-            amazing together!
+            Focused on cloud infrastructure, automation, and system reliability.
+            Open to DevOps and cloud engineering opportunities.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <button className="px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold rounded transition-all duration-300 hover:scale-105 border border-gray-600 bg-transparent hover:bg-blue-600/90">
-              Web Design
+              DevOps
             </button>
             <button className="px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold rounded transition-all duration-300 hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white">
-              Web Development
+            Cloud Engineering
+            
             </button>
           </div>
         </div>
@@ -88,7 +89,7 @@ const Footer = () => {
                   return toast.error("Please write a message.");
                 if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
                   return toast.error(
-                    "Please enter a valid email or leave it blank."
+                    "Please enter a valid email or leave it blank.",
                   );
                 try {
                   setSending(true);
