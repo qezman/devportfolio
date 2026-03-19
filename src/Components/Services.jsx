@@ -14,18 +14,6 @@ import {
 const Services = () => {
   const allServices = [
     {
-      title: "Product Design",
-      subtitle:
-        "Creating intuitive user experiences with research-driven design principles and modern UI patterns.",
-      icon: <FaPaintBrush />,
-    },
-    {
-      title: "Frontend Development",
-      subtitle:
-        "Building responsive, performant web applications using React, Next.js, and modern JavaScript frameworks.",
-      icon: <FaReact />,
-    },
-    {
       title: "Cloud Infrastructure",
       subtitle:
         "Designing and implementing scalable cloud solutions using AWS, Terraform, and Infrastructure-as-Code principles.",
@@ -48,6 +36,18 @@ const Services = () => {
       subtitle:
         "Designing secure, scalable network architectures with load balancing, auto-scaling, and high availability.",
       icon: <FaNetworkWired />,
+    },
+    {
+      title: "Product Design",
+      subtitle:
+        "Creating intuitive user experiences with research-driven design principles and modern UI patterns.",
+      icon: <FaPaintBrush />,
+    },
+    {
+      title: "Frontend Development",
+      subtitle:
+        "Building responsive, performant web applications using React, Next.js, and modern JavaScript frameworks.",
+      icon: <FaReact />,
     },
   ];
 

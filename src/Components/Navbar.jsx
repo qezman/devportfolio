@@ -14,10 +14,10 @@ import {
 const contactInfo = {
   email: "kazeemjimohdev@gmail.com",
   socialLinks: {
-    behance: "https://www.behance.net/jimohkazeem",
-    linkedin: "https://www.linkedin.com/in/kazeem-jimoh-027a3b21a/",
-    whatsapp: "https://wa.me/8122142257",
     github: "https://github.com/qezman",
+    linkedin: "https://www.linkedin.com/in/kazeem-jimoh-027a3b21a/",
+    behance: "https://www.behance.net/jimohkazeem",
+    whatsapp: "https://wa.me/8122142257",
   },
 };
 

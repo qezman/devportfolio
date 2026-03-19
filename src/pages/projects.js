@@ -5,6 +5,13 @@ import { FaArrowRight, FaPaintBrush, FaCode, FaCloud } from "react-icons/fa";
 export default function ProjectsHubPage() {
   const sections = [
     {
+      title: "Cloud & DevOps",
+      description:
+        "Infrastructure, automation, and deployment workflows built for reliability.",
+      icon: <FaCloud className="text-3xl" />,
+      href: "/cloud-devops",
+    },
+    {
       title: "Product Design",
       description:
         "Case studies and UI/UX work: research, design systems, and polished prototypes.",
@@ -17,13 +24,6 @@ export default function ProjectsHubPage() {
         "Responsive, performant web apps with React/Next.js and modern tooling.",
       icon: <FaCode className="text-3xl" />,
       href: "/frontend-projects",
-    },
-    {
-      title: "Cloud & DevOps",
-      description:
-        "Infrastructure, automation, and deployment workflows built for reliability.",
-      icon: <FaCloud className="text-3xl" />,
-      href: "/cloud-devops",
     },
   ];
 

@@ -6,6 +6,13 @@ import { FaArrowRight, FaPaintBrush, FaCode, FaCloud } from "react-icons/fa";
 const HomePage = () => {
   const sections = [
     {
+      title: "Cloud & DevOps",
+      description:
+        "Designing scalable cloud solutions and implementing Infrastructure-as-Code with Terraform and AWS.",
+      icon: <FaCloud className="text-3xl" />,
+      href: "/cloud-devops",
+    },
+    {
       title: "Product Design",
       description:
         "Creating intuitive user experiences with research-driven design principles and modern UI patterns.",
@@ -18,13 +25,6 @@ const HomePage = () => {
         "Building responsive, performant web applications using React, Next.js, and modern JavaScript frameworks.",
       icon: <FaCode className="text-3xl" />,
       href: "/frontend-projects",
-    },
-    {
-      title: "Cloud & DevOps",
-      description:
-        "Designing scalable cloud solutions and implementing Infrastructure-as-Code with Terraform and AWS.",
-      icon: <FaCloud className="text-3xl" />,
-      href: "/cloud-devops",
     },
   ];
 
