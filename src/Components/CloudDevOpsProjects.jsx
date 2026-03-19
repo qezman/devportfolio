@@ -22,17 +22,7 @@ const CloudDevOpsProjects = () => {
       tech: ["Terraform", "AWS", "EC2", "Security Groups"],
       github: "https://github.com/qezman/terraform-aws-infrastructure",
       icon: <FaAws className="text-2xl" />,
-      architecture: [
-        "User",
-        "↓",
-        "Internet",
-        "↓",
-        "Security Group",
-        "↓",
-        "EC2 Instance",
-        "↓",
-        "Application",
-      ],
+      
     },
     // {
     //   image: "/4.jpg",
@@ -53,21 +43,13 @@ const CloudDevOpsProjects = () => {
     // },
     
     {
-      image: "/4.jpg",
+      image: "/efs.png",
       title: "EFS Shared Storage Implementation",
       desc: "Implemented EFS shared storage to enable seamless data sharing and synchronization across multiple EC2 instances.",
       tech: ["Terraform", "AWS", "EFS", "Shared Storage"],
       github: "https://github.com/qezman/AWS-EFS-shared-storage-implementation",
       icon: <FaNetworkWired className="text-2xl" />,
-      architecture: [
-        "User",
-        "↓",
-        "Internet",
-        "↓",
-        "Security Group",
-        "↓",
-        "EC2 Instance",
-      ]
+     
     },
     {
       image: "/5.jpg",
@@ -93,19 +75,6 @@ const CloudDevOpsProjects = () => {
       tech: ["Linux", "Nginx", "Next.js", "Server configuration"],
       github: "https://github.com/qezman/deploy-next.js-project",
       icon: <FaServer className="text-2xl" />,
-      architecture: [
-        "User",
-        "↓",
-        "Internet",
-        "↓",
-        "Security Group",
-        "↓",
-        "EC2 Instance",
-        "↓",
-        "Nginx",
-        "↓",
-        "Next.js App",
-      ],
     },
   ];
 
@@ -198,19 +167,7 @@ const CloudDevOpsProjects = () => {
                       {project.desc}
                     </p>
 
-                    {/* Architecture Diagram */}
-                    <div className="mb-6 p-4 bg-black/30 rounded-lg border border-white/10">
-                      <h3 className="text-sm font-semibold text-blue-400 mb-3">
-                        Architecture Flow
-                      </h3>
-                      <div className="text-center text-xs sm:text-sm font-mono">
-                        {project.architecture.map((line, lineIndex) => (
-                          <div key={lineIndex} className="text-gray-300">
-                            {line}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    
 
                     {/* Tech Stack */}
                     <div className="mb-6">
